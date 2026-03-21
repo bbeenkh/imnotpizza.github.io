@@ -1,9 +1,9 @@
 {
-  "name": "ods-react-scaffold",
+  "name": "bbeenkh-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://imnotpizza.github.io",
+  "homepage": "https://bbeenkh.github.io",
   "scripts": {
     "dev": "vite --mode development",
     "prod": "vite --mode production",
