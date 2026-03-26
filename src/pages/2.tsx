@@ -2,44 +2,65 @@ import SlideLayout from '@/layouts/SlideLayout';
 import { purple } from '@/styles/theme';
 
 const skillCategories = [
-  { label: 'Core Library & Framework', items: [] },
-  { label: 'State Management', items: [] },
-  { label: 'Micro Frontend', items: [] },
-  { label: 'Bundler', items: [] },
-  { label: 'Styling', items: [] },
-  { label: 'Deployment & DevOps', items: [] },
-  { label: 'Testing', items: [] },
-  { label: 'AI', items: [] },
+  { label: 'Core Library & Framework', items: ['React', 'Next.js (v15 App Router)', 'Vue.js', 'TypeScript', 'React Native'] },
+  { label: 'State Management', items: ['Zustand', 'React Query', 'Recoil'] },
+  { label: 'Micro Frontend', items: ['Module Federation'] },
+  { label: 'Bundler', items: ['Vite', 'Rollup', 'Webpack'] },
+  { label: 'Styling', items: ['Tailwind CSS', 'styled-components', 'framer-motion'] },
+  { label: 'Deployment & DevOps', items: ['Vercel', 'GitHub Packages', 'Docker'] },
+  { label: 'Testing', items: ['Playwright', 'Vitest', 'MSW'] },
+  { label: 'AI', items: ['Claude Code'] },
 ];
 
 const highlights = [
-  'React, Nextjs(v15 App Router), Vue.js, Typescript를 메인 스택으로 한 서비스 개발경험과 React Native+SPA Web 기반의 하이브리드 앱 제작 등의 모바일 개발 경험을 가지고 있습니다.',
-  'React Devtools 의 프로파일링과 Network Waterfall을 활용해 렌더링 및 페이지 로드 성능 향상 경험, Web Vitals 지표 개선 경험을 가지고 있습니다.',
-  'SOLID 원칙을 기반으로 재사용 가능하며 확장가능한 UI 설계에 관심이 많으며, 이러한 원칙을 컴포넌트 및 비즈니스 로직에 적용하여 UI 작업공수 감소, 에러 재발생률 감소 등의 성과를 내었습니다.',
-  'PlayWright, Vitest, MSW 를 사용하여 단위테스트, e2e 시나리오테스트를 프로젝트에 적용하였습니다. 테스트 대상의 우선순위를 적용하여 test coverage에 집중하기 보다는 핵심 코드를 철저히 테스트 할수 있도록 하였습니다.',
   {
-    title: 'Claude Code 를 사용한 코드 자동화',
+    title: '프레임워크 & 모바일 프로젝트 설계&운용',
+    desc: 'React, Nextjs(v15 App Router), Vue.js, Typescript를 메인 스택으로 한 서비스 개발경험과 React Native+SPA Web 기반의 하이브리드 앱 제작 등의 모바일 개발 경험을 가지고 있습니다.',
+  },
+  {
+    title: '성능 최적화',
+    desc: 'React Devtools 의 프로파일링과 Network Waterfall을 활용해 렌더링 및 페이지 로드 성능 향상 경험, Web Vitals 지표 개선 경험을 가지고 있습니다.',
+  },
+  {
+    title: '수정에 용이하고 확장 가능한 UI 설계',
+    desc: 'SOLID 원칙을 기반으로 재사용 가능하며 확장가능한 UI 설계에 관심이 많으며, 이러한 원칙을 컴포넌트 및 비즈니스 로직에 적용하여 UI 작업공수 감소, 에러 재발생률 감소 등의 성과를 내었습니다.',
+  },
+  {
+    title: '테스트 자동화 구축',
+    desc: 'PlayWright, Vitest, MSW 를 사용하여 단위테스트, e2e 시나리오테스트를 프로젝트에 적용하였습니다. 테스트 대상의 우선순위를 적용하여 test coverage에 집중하기 보다는 핵심 코드를 철저히 테스트 할수 있도록 하였습니다.',
+  },
+  {
+    title: 'AI 자동화를 통한 생산성 향상',
     desc: 'Claude Code 를 도입하여 UI 작업 등 단순작업을 자동화하였고, 디자인시스템에 Skill 사용하여 정확성과 토큰 사용량을 최적화하였습니다.',
   },
 ];
 
 export default function Page2() {
   return (
-    <SlideLayout subtitle="About" title="Lorem Ipsum Dolor">
-      <div className="grid grid-cols-2 gap-[4%] h-full pt-[4%]">
-        {/* 좌측: 스킬 카테고리 */}
-        <div className="grid grid-cols-2 gap-x-[6%] gap-y-[4%] content-start">
+    <SlideLayout subtitle="핵심역량" title="Hard Skills">
+      <div className="grid grid-cols-3 gap-[4%] h-full pt-[4%]">
+        {/* 좌측 1/3: 스킬 카테고리 */}
+        <div className="grid grid-cols-2 gap-x-[4%] gap-y-[4%] content-start">
           {skillCategories.map((category) => (
             <div key={category.label}>
-              <h3 className="text-sm font-semibold" style={{ color: purple.light }}>
+              <h3 className="text-sm font-semibold accent-text">
                 {category.label}
               </h3>
+              {category.items.length > 0 && (
+                <ul className="mt-1">
+                  {category.items.map((item) => (
+                    <li key={item} className="text-xs text-gray-300 leading-relaxed">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
 
-        {/* 우측: 하이라이트 카드 */}
-        <div className="flex flex-col gap-[3%] overflow-y-auto">
+        {/* 우측 2/3: 하이라이트 카드 2xn 그리드 */}
+        <div className="col-span-2 grid grid-cols-2 gap-[3%] overflow-y-auto content-start">
           {highlights.map((item, i) => {
             const isObj = typeof item === 'object';
             return (

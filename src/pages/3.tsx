@@ -23,35 +23,21 @@ const softSkills = [
 export default function Page3() {
   return (
     <SlideLayout subtitle="핵심 역량" title="Soft Skills">
-      <div className="grid grid-cols-2 gap-[4%] h-full pt-[4%]">
-        {/* 좌측: 타이틀 목록 */}
-        <div className="flex flex-col gap-[4%] content-start">
-          {softSkills.map((skill, i) => (
-            <div key={i}>
-              <h3 className="text-sm font-semibold" style={{ color: purple.light }}>
-                {skill.title}
-              </h3>
-            </div>
-          ))}
-        </div>
-
-        {/* 우측: 설명 카드 */}
-        <div className="flex flex-col gap-[3%] overflow-y-auto">
-          {softSkills.map((skill, i) => (
-            <div
-              key={i}
-              className="rounded-xl px-[6%] py-[4%]"
-              style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
-            >
-              <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
-                {skill.title}
-              </p>
-              <p className="text-xs text-gray-300 leading-relaxed">
-                {skill.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 grid-rows-2 gap-[3%] h-full pt-[4%]">
+        {softSkills.map((skill, i) => (
+          <div
+            key={i}
+            className="rounded-xl px-[6%] py-[4%] flex flex-col justify-center"
+            style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
+          >
+            <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
+              {skill.title}
+            </p>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              {skill.desc}
+            </p>
+          </div>
+        ))}
       </div>
     </SlideLayout>
   );
