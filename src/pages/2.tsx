@@ -25,10 +25,10 @@ const highlights = [
 
 export default function Page2() {
   return (
-    <SlideLayout subtitle="About" title="Lorem Ipsum Dolor">
-      <div className="grid grid-cols-2 gap-[4%] h-full pt-[4%]">
-        {/* 좌측: 스킬 카테고리 */}
-        <div className="grid grid-cols-2 gap-x-[6%] gap-y-[4%] content-start">
+    <SlideLayout subtitle="핵심역량" title="Hard Skills">
+      <div className="grid grid-cols-3 gap-[4%] h-full pt-[4%]">
+        {/* 좌측 1/3: 스킬 카테고리 */}
+        <div className="grid grid-cols-2 gap-x-[6%] gap-y-[8%] content-start">
           {skillCategories.map((category) => (
             <div key={category.label}>
               <h3 className="text-sm font-semibold" style={{ color: purple.light }}>
@@ -38,8 +38,8 @@ export default function Page2() {
           ))}
         </div>
 
-        {/* 우측: 하이라이트 카드 */}
-        <div className="flex flex-col gap-[3%] overflow-y-auto">
+        {/* 우측 2/3: 하이라이트 카드 2xn 그리드 */}
+        <div className="col-span-2 grid grid-cols-2 gap-[3%] overflow-y-auto content-start">
           {highlights.map((item, i) => {
             const isObj = typeof item === 'object';
             return (
