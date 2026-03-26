@@ -37,12 +37,14 @@ export default function Page6() {
     <SlideLayout subtitle="Projects" title="My010">
       <div className="flex gap-[4%] h-full pt-[4%]">
         <div className="w-1/3 flex items-center">
-          <div
-            className="w-full aspect-video rounded-lg"
-            style={{ backgroundColor: purple.muted, border: `1px solid ${purple.border}` }}
+          <img
+            src="/assets/my010-2.png"
+            alt="My010 화면 2"
+            className="w-full rounded-lg"
+            style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
-        <div className="w-2/3 flex flex-col justify-center">
+        <div className="w-2/3 flex flex-col justify-start">
           <div className="flex flex-col gap-[6%]">
             {topics.map((topic, i) => (
               <div key={i}>
