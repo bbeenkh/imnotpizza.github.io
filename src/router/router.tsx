@@ -3,6 +3,7 @@ import Page2 from '@/pages/2';
 import Page3 from '@/pages/3';
 import Page4 from '@/pages/4';
 import Page5 from '@/pages/5';
+import Page6 from '@/pages/6';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 export default function AppRouter() {
@@ -14,6 +15,7 @@ export default function AppRouter() {
         <Route path="/3" element={<Page3 />} />
         <Route path="/4" element={<Page4 />} />
         <Route path="/5" element={<Page5 />} />
+        <Route path="/6" element={<Page6 />} />
         <Route path="*" element={<Navigate to="/1" replace />} />
       </Routes>
     </Router>

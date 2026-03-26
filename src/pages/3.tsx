@@ -1,75 +1,56 @@
 import SlideLayout from '@/layouts/SlideLayout';
 import { purple } from '@/styles/theme';
 
-const career = [
-  { year: '2018', role: 'Junior Developer', company: 'Lorem Corp', desc: 'Lorem ipsum dolor sit amet' },
-  { year: '2020', role: 'Frontend Engineer', company: 'Ipsum Inc', desc: 'Consectetur adipiscing elit' },
-  { year: '2022', role: 'Senior Engineer', company: 'Dolor LLC', desc: 'Sed do eiusmod tempor' },
-  { year: '2024', role: 'Tech Lead', company: 'Sit Amet Co', desc: 'Ut enim ad minim veniam' },
+const softSkills = [
+  {
+    title: '복잡한 도메인 분석, 팀간 협업을 통한 UI,UX 설계 경험',
+    desc: '복잡한 비즈니스 도메인을 분석하여 사용자의 니즈와 핵심을 파악하고, 기획·디자인·백엔드와의 협업을 통해 데이터 흐름과 사용자 행동을 기준으로 UI 설계에 참여하였습니다.',
+  },
+  {
+    title: '문서 작성의 습관화로 일관적인 정보전달 및 혼선 방지',
+    desc: 'Confluence와 같은 사내위키에 회의 주제와 같은 공유내용을 일관적으로 제공하여 팀 내 정보 전달의 일관성을 유지하고 커뮤니케이션 비용을 최소화하였습니다.',
+  },
+  {
+    title: '팀 개개인의 의견 존중 및 최선의 해결책 모색',
+    desc: '협업 과정에서 관점이 엇갈릴 때도 각자의 입장을 최대한 수렴하여 공통 목표를 정하였고 한번 정해진 목표는 모든 팀원이 따를 수 있도록 지도하였습니다. 의견 조율이 되지 않을 시, 객관적 사실을 바탕으로 시뮬레이션, 프로토타입 제작을 통해 최종적으로 의견을 결정하였습니다.',
+  },
+  {
+    title: '서비스의 성장과 개선의 본질을 추구합니다.',
+    desc: '개발자가 하는 모든 일들은 결국 회사와 서비스의 성장에 초점을 맞춰야 한다고 믿고 있으며, 저의 업무 방향도 이러한 점을 중심으로 하고 있습니다.',
+  },
 ];
 
 export default function Page3() {
   return (
-    <SlideLayout subtitle="Career" title="Lorem Ipsum Dolor">
-      <div className="flex items-center h-full pt-[4%]">
-        <div className="w-full relative">
-          {/* Timeline line — vertically centered */}
-          <div
-            className="absolute top-1/2 left-0 right-0 h-[2px] -translate-y-1/2"
-            style={{ background: `linear-gradient(90deg, ${purple.dark}, ${purple.accent})` }}
-          />
+    <SlideLayout subtitle="핵심 역량" title="Soft Skills">
+      <div className="grid grid-cols-2 gap-[4%] h-full pt-[4%]">
+        {/* 좌측: 타이틀 목록 */}
+        <div className="flex flex-col gap-[4%] content-start">
+          {softSkills.map((skill, i) => (
+            <div key={i}>
+              <h3 className="text-sm font-semibold" style={{ color: purple.light }}>
+                {skill.title}
+              </h3>
+            </div>
+          ))}
+        </div>
 
-          <div className="flex justify-between">
-            {career.map((item, i) => {
-              const isTop = i % 2 === 0;
-              return (
-                <div
-                  key={item.year}
-                  className="flex flex-col items-center w-[22%]"
-                  style={{ flexDirection: isTop ? 'column' : 'column-reverse' }}
-                >
-                  {/* Content card */}
-                  <div
-                    className="rounded-lg p-[12%] w-full text-center"
-                    style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
-                  >
-                    <span
-                      className="text-lg font-bold text-white"
-                    >
-                      {item.year}
-                    </span>
-                    <h3 className="text-lg font-semibold text-white mt-[6%]">
-                      {item.role}
-                    </h3>
-                    <p className="text-sm text-gray-300 mt-[2%]">
-                      {item.company}
-                    </p>
-                    <p className="text-sm text-gray-300 mt-[6%] leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                  {/* Connector line */}
-                  <div className="w-[2px] h-[clamp(8px,1vw,16px)]" style={{ backgroundColor: purple.border }} />
-
-                  {/* Dot */}
-                  <div
-                    className="w-[clamp(10px,1.2vw,18px)] h-[clamp(10px,1.2vw,18px)] rounded-full shrink-0 z-10 border-2 border-black"
-                    style={{ backgroundColor: purple.accent }}
-                  />
-
-                  {/* Spacer for the opposite side */}
-                  <div className="w-[2px] h-[clamp(8px,1vw,16px)] opacity-0" />
-                  <div className="rounded-lg p-[12%] w-full opacity-0 pointer-events-none">
-                    <span className="text-lg">&nbsp;</span>
-                    <h3 className="text-lg mt-[6%]">&nbsp;</h3>
-                    <p className="text-sm mt-[2%]">&nbsp;</p>
-                    <p className="text-sm mt-[6%]">&nbsp;</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        {/* 우측: 설명 카드 */}
+        <div className="flex flex-col gap-[3%] overflow-y-auto">
+          {softSkills.map((skill, i) => (
+            <div
+              key={i}
+              className="rounded-xl px-[6%] py-[4%]"
+              style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
+            >
+              <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
+                {skill.title}
+              </p>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                {skill.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </SlideLayout>

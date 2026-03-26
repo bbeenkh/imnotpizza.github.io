@@ -9,8 +9,7 @@ export default function Page1() {
           Lorem Ipsum
         </h1>
         <p className="text-sm text-gray-300 max-w-[60%] mt-[2%]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.
+          빠른 UX개선을 위해 코드 구조와 개발 프로세스 개선에 집중해온 프론트엔드 개발자 고보빈입니다.
         </p>
         <div
           className="mt-[3%] px-[3%] py-[1.2%] rounded-full text-sm font-semibold text-white w-fit"
