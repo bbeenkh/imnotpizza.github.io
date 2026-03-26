@@ -6,6 +6,7 @@
 - SlideLayout 공통 레이아웃 사용 (src/layouts/SlideLayout.tsx)
   - flex 기반 레이아웃 (absolute 사용 금지)
   - 제목(subtitle + title)은 좌측 최상단 고정
+  - hideTitle prop으로 제목 영역 숨김 가능
   - padding은 상하좌우 동일하게 3rem
 - 컴포넌트 분리
   - PageNav (src/components/PageNav.tsx) — 페이지 네비게이션 버튼
@@ -17,7 +18,7 @@
   - 컨텐츠 주제/제목: text-lg (18px), 하얀색
   - 컨텐츠 내용: text-sm (14px), gray-300
 - 페이지 구성
-  - 1페이지: Intro / Hero
+  - 1페이지: 표지 — hideTitle, 큰 제목 상단 배치, 하단에 Contact 링크
   - 2페이지: About — 2x2 grid (균등 row 높이)
   - 3페이지: Career — 좌→우 타임라인, 상하 번갈아 표시
   - 4페이지: Projects — 좌 1/3 이미지, 우 2/3 설명 (주제+내용 3개)
