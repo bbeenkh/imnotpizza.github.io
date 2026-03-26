@@ -36,7 +36,7 @@ const career = [
 
 export default function Page4() {
   return (
-    <SlideLayout title="성장 타임라인">
+    <SlideLayout title="커리어 타임라인">
       <div className="flex items-center h-full pt-[4%]">
         <div className="w-full relative">
           {/* Timeline line — vertically centered */}
