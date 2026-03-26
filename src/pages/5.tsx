@@ -17,6 +17,14 @@ const topics = [
     content:
       'Next.js(v15), React19, typescript, React Query, Zustand, Vercel, tailwindcss',
   },
+  {
+    title: '발생한 문제',
+    content: 'My010의 가장 핵심적인 기능 중 하나는 통신 사업자들이 휴대폰 구매시 지급될 리베이트(보조금) 금액을 업로드 및 관리하는 기능입니다.',
+  },
+  {
+    title: '',
+    content: '이 과정에서 휴대폰 목록/상세 정보와 요금제 목록/상세 정보에 대한 api가 여러군데에서 사용되었으나 이 정보들은 변동이 몇 달에 한번정도 발생하는 데이터여서 불필요한 api 호출이란 문제가 있었습니다.',
+  },
 ];
 
 export default function Page5() {
