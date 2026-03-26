@@ -1,0 +1,11 @@
+개발자 포트폴리오 제작 프로젝트
+- 파워포인트 ppt 와 동일한 화면비율(16:9), 구성으로 작업
+- 각 슬라이드는 독립적인 페이지로 되어야 함 (/1, /2, /3...)
+- 검정 배경 + 보라색(#A855F7) 포인트 컬러
+- SlideLayout 공통 레이아웃 사용 (src/layouts/SlideLayout.tsx)
+  - flex 기반 레이아웃 (absolute 사용 금지)
+  - 제목(subtitle + title)은 좌측 최상단 고정
+  - padding은 상하좌우 동일하게 3rem
+- 테마 색상은 src/styles/theme.ts에서 관리
+- 좌측 상단 페이지 이동 네비게이션 버튼 (SlideLayout 내 fixed)
+- / 및 미등록 경로는 /1로 리다이렉트
