@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const OUT = resolve(ROOT, 'ppt');
-const BASE_URL = process.env.BASE_URL || 'http://localhost:4173';
+const BASE_URL = 'http://localhost:5678';
 const PAGES = [1, 2, 3, 4, 5];
 
 await mkdir(OUT, { recursive: true });
