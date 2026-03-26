@@ -12,7 +12,7 @@ const topics = [
   },
   {
     title: '주요 기술 스택',
-    content: 'Vue.js 기반 SPA 프로젝트이며, Module Federation을 사용한 React 모듈이 부분적으로 포함된 방식으로 구성되어있습니다.',
+    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel',
   },
   {
     title: '발생한 문제',
