@@ -19,7 +19,7 @@ function SlideIntro() {
   return (
     <Slide>
       <div className="flex flex-col items-center justify-center h-full text-center px-[10%]">
-        <p className="text-xs tracking-[0.3em] uppercase mb-[3%]" style={{ color: purple.accent }}>
+        <p className="accent-text text-xs tracking-[0.3em] uppercase mb-[3%]">
           Portfolio
         </p>
         <h1 className="text-[clamp(1.32rem,3.85vw,3.3rem)] font-bold text-white leading-tight">
@@ -54,7 +54,7 @@ function SlideAbout() {
         </div>
         {/* Right */}
         <div className="w-[55%] flex flex-col justify-center pr-[8%]">
-          <p className="text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[3%]" style={{ color: purple.accent }}>
+          <p className="accent-text text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[3%]">
             About
           </p>
           <h2 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold text-white leading-snug">
@@ -94,7 +94,7 @@ function SlideSkills() {
   return (
     <Slide>
       <div className="flex flex-col justify-center h-full px-[10%]">
-        <p className="text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[2%]" style={{ color: purple.accent }}>
+        <p className="accent-text text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[2%]">
           Skills
         </p>
         <h2 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold text-white mb-[5%]">
@@ -131,7 +131,7 @@ function SlideProjects() {
   return (
     <Slide>
       <div className="flex flex-col justify-center h-full px-[8%]">
-        <p className="text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[2%]" style={{ color: purple.accent }}>
+        <p className="accent-text text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[2%]">
           Projects
         </p>
         <h2 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold text-white mb-[5%]">
@@ -178,7 +178,7 @@ function SlideContact() {
   return (
     <Slide>
       <div className="flex flex-col items-center justify-center h-full text-center px-[15%]">
-        <p className="text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[3%]" style={{ color: purple.accent }}>
+        <p className="accent-text text-[clamp(0.55rem,0.99vw,0.825rem)] uppercase tracking-[0.2em] mb-[3%]">
           Contact
         </p>
         <h2 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold text-white">

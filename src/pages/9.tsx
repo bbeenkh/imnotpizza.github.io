@@ -3,11 +3,11 @@ import { purple } from '@/styles/theme';
 
 const topics = [
   {
-    title: '프로젝트 개요',
+    title: '프로젝트 설명',
     content: '퀵, 택배접수, 배송현황, 결제현황 등을 처리하고 실시간 배송 현황을 손쉽게 파악할 수 있는 PC/앱 기반 B2B 서비스입니다. 앱의 경우 webview를 통해 컨텐츠를 보여주는 하이브리드 앱 방식입니다.',
   },
   {
-    title: '담당 역할 및 업무 범위',
+    title: '담당 역할',
     content: '투디 웹 서비스 프론트엔드의 전반적인 개발을 담당하였습니다.',
   },
 ];

@@ -147,6 +147,10 @@ body {
   width: 100%;
 }
 
+.accent-text {
+  color: #A855F7;
+}
+
 /* Count-up animation */
 @keyframes countUp {
   from {
@@ -253,3 +257,4 @@ body {
     @apply py-20 px-4 sm:px-6 lg:px-8;
   }
 }
+

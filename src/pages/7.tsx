@@ -3,15 +3,15 @@ import { purple } from '@/styles/theme';
 
 const topics = [
   {
-    title: '',
+    title: '프로젝트 설명',
     content: '코코넛은 KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 기능을 담고 있는 서비스입니다.',
   },
   {
-    title: '',
+    title: '담당 역할',
     content: '코코넛 신규기능, 유지보수, 이슈대응 작업에 대한 팀원 업무 분배, 일정 조율 등 전반적 팀 운영관리를 하였습니다.',
   },
   {
-    title: '',
+    title: '주요 기술 스택',
     content: 'Vue.js 기반 SPA 프로젝트이며, Module Federation을 사용한 React 모듈이 부분적으로 포함된 방식으로 구성되어있습니다.',
   },
 ];
