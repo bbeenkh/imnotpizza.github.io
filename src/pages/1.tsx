@@ -1,5 +1,4 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import { purple } from '@/styles/theme';
 
 export default function Page1() {
   return (
@@ -13,22 +12,6 @@ export default function Page1() {
           프론트엔드 개발자 <span className='accent-text'>고보빈</span>입니다.
           <br />
         </h1>
-        <div className="flex flex-col gap-3 mt-auto w-1/3">
-          {['lorem@ipsum.com', 'github.com/lorem', 'linkedin.com/in/lorem'].map(
-            (link) => (
-              <span
-                key={link}
-                className="px-[2.5%] py-[1%] rounded-lg text-sm text-white"
-                style={{
-                  backgroundColor: 'rgba(255,255,255,0.06)',
-                  border: `1px solid ${purple.border}`,
-                }}
-              >
-                {link}
-              </span>
-            ),
-          )}
-        </div>
       </div>
     </SlideLayout>
   );

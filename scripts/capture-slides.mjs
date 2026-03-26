@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const OUT = resolve(ROOT, 'ppt');
 const BASE_URL = 'http://localhost:5678';
-const PAGES = [1, 2, 3, 4, 5];
+const PAGES = Array.from({ length: 12 }, (_, i) => i + 1);
 
 await mkdir(OUT, { recursive: true });
 
