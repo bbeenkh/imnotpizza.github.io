@@ -14,6 +14,10 @@ const topics = [
     title: '주요 기술 스택',
     content: 'Vue.js 기반 SPA 프로젝트이며, Module Federation을 사용한 React 모듈이 부분적으로 포함된 방식으로 구성되어있습니다.',
   },
+  {
+    title: '발생한 문제',
+    content: (<>저희 프론트엔드 팀은 공식 UI 라이브러리를 React를 사용하기로 결정하고, 디자인시스템도 <span className="accent-text font-bold">React</span> 기반으로 제작하였습니다. 그러나 코코넛은 <span className="accent-text font-bold">Vue.js</span> 기반 프로젝트여서 비교적 코드 생산성이 떨어진다는 불만사항이 나왔고, 때마침 요금계산기 기능의 UI의 리뉴얼 요구사항까지 나와 디자인시스템을 사용하여야 했습니다.</>),
+  },
 ];
 
 export default function Page7() {
@@ -21,10 +25,12 @@ export default function Page7() {
     <SlideLayout subtitle="Projects" title="Coconuts">
       <div className="flex gap-[4%] h-full pt-[4%]">
         {/* Left — 이미지 (1/3) */}
-        <div className="w-1/3 flex items-center">
-          <div
-            className="w-full aspect-video rounded-lg"
-            style={{ backgroundColor: purple.muted, border: `1px solid ${purple.border}` }}
+        <div className="w-1/3 flex items-start">
+          <img
+            src="/assets/coconuts-1.png"
+            alt="Coconuts 견적 화면"
+            className="w-full h-[400px] object-contain rounded-lg"
+            style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
 
