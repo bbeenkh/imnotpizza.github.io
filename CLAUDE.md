@@ -1,0 +1,25 @@
+개발자 포트폴리오 제작 프로젝트
+- 파워포인트 ppt 와 동일한 화면비율(16:9), 구성으로 작업
+- main 태그 영역 내 ppt의 내용이 들어가야 함 
+- 각 슬라이드는 독립적인 페이지로 되어야 함 (/1, /2, /3...)
+- 검정 배경 + 보라색(#A855F7) 포인트 컬러
+- SlideLayout 공통 레이아웃 사용 (src/layouts/SlideLayout.tsx)
+  - flex 기반 레이아웃 (absolute 사용 금지)
+  - 제목(subtitle + title)은 좌측 최상단 고정
+  - hideTitle prop으로 제목 영역 숨김 가능
+  - padding은 상하좌우 동일하게 3rem
+- 컴포넌트 분리
+  - PageNav (src/components/PageNav.tsx) — 페이지 네비게이션 버튼
+  - SlideTitle (src/components/SlideTitle.tsx) — subtitle + title 영역
+- 테마 색상은 src/styles/theme.ts에서 관리
+- 좌측 상단 페이지 이동 네비게이션 버튼 (SlideLayout 내 fixed)
+- / 및 미등록 경로는 /1로 리다이렉트
+- 폰트 규칙
+  - 컨텐츠 주제/제목: text-lg (18px), 하얀색
+  - 컨텐츠 내용: text-sm (14px), gray-300
+- 페이지 구성
+  - 1페이지: 표지 — hideTitle, 큰 제목 상단 배치, 하단에 Contact 링크
+  - 2페이지: About — 2x2 grid (균등 row 높이)
+  - 3페이지: Career — 좌→우 타임라인, 상하 번갈아 표시
+  - 4페이지: Projects — 좌 1/3 이미지, 우 2/3 설명 (주제+내용 3개)
+  - 5페이지: Contact\
