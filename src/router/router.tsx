@@ -10,7 +10,6 @@ import Page9 from '@/pages/9';
 import Page10 from '@/pages/10';
 import Page11 from '@/pages/11';
 import Page12 from '@/pages/12';
-import Page13 from '@/pages/13';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 export default function AppRouter() {
@@ -29,7 +28,6 @@ export default function AppRouter() {
         <Route path="/10" element={<Page10 />} />
         <Route path="/11" element={<Page11 />} />
         <Route path="/12" element={<Page12 />} />
-        <Route path="/13" element={<Page13 />} />
         <Route path="*" element={<Navigate to="/1" replace />} />
       </Routes>
     </Router>
