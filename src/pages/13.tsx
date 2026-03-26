@@ -26,7 +26,7 @@ export default function Page13() {
             style={{ backgroundColor: purple.muted, border: `1px solid ${purple.border}` }}
           />
         </div>
-        <div className="w-2/3 flex flex-col justify-center">
+        <div className="w-2/3 flex flex-col justify-start">
           <div className="flex flex-col gap-[6%]">
             {topics.map((topic, i) => (
               <div key={i}>

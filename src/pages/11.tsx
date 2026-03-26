@@ -25,7 +25,7 @@ export default function Page11() {
         </div>
 
         {/* Right — 설명 (2/3) */}
-        <div className="w-2/3 flex flex-col justify-center">
+        <div className="w-2/3 flex flex-col justify-start">
           <div className="flex flex-col gap-[6%]">
             {topics.map((topic, i) => (
               <div key={i}>
