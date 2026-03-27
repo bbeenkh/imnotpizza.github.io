@@ -98,6 +98,7 @@
     "eslint-plugin-testing-library": "^6.5.0",
     "gh-pages": "^6.3.0",
     "globals": "^15.11.0",
+    "html2canvas": "^1.4.1",
     "jsdom": "^25.0.1",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",

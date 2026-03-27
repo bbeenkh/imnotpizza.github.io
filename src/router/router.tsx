@@ -10,7 +10,10 @@ import Page9 from '@/pages/9';
 import Page10 from '@/pages/10';
 import Page11 from '@/pages/11';
 import Page12 from '@/pages/12';
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
+const CapturePage = import.meta.env.DEV ? lazy(() => import('@/pages/capture')) : null;
 
 export default function AppRouter() {
   return (
@@ -28,6 +31,16 @@ export default function AppRouter() {
         <Route path="/10" element={<Page10 />} />
         <Route path="/11" element={<Page11 />} />
         <Route path="/12" element={<Page12 />} />
+        {CapturePage && (
+          <Route
+            path="/capture"
+            element={
+              <Suspense fallback={null}>
+                <CapturePage />
+              </Suspense>
+            }
+          />
+        )}
         <Route path="*" element={<Navigate to="/1" replace />} />
       </Routes>
     </Router>

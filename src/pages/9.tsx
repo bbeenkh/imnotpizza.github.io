@@ -29,13 +29,13 @@ export default function Page9() {
           <img
             src="/assets/toodee-main.webp"
             alt="Toodee 메인 화면"
-            className="w-full rounded-lg"
+            className="w-4/5 rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
           <img
             src="/assets/toodee-order-rz.webp"
             alt="Toodee 접수 화면"
-            className="w-full rounded-lg"
+            className="w-4/5 rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
