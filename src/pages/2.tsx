@@ -12,26 +12,26 @@ const skillCategories = [
   { label: 'AI', items: ['Claude Code'] },
 ];
 
-const highlights = [
+const highlights: { title: string; desc: React.ReactNode }[] = [
   {
     title: '프레임워크 & 모바일 프로젝트 설계&운용',
-    desc: 'React, Nextjs(v15 App Router), Vue.js, Typescript를 메인 스택으로 한 서비스 개발경험과 React Native+SPA Web 기반의 하이브리드 앱 제작 등의 모바일 개발 경험을 가지고 있습니다.',
+    desc: <><span className="accent-text font-bold">React, Next.js(v15 App Router), Vue.js, TypeScript</span>를 메인 스택으로 한 서비스 개발경험과 <span className="accent-text font-bold">React Native+SPA Web 기반의 하이브리드 앱</span> 제작 등의 모바일 개발 경험을 가지고 있습니다.</>,
   },
   {
     title: '성능 최적화',
-    desc: 'React Devtools 의 프로파일링과 Network Waterfall을 활용해 렌더링 및 페이지 로드 성능 향상 경험, Web Vitals 지표 개선 경험을 가지고 있습니다.',
+    desc: <><span className="accent-text font-bold">React Devtools</span> 프로파일링과 Network Waterfall을 활용해 렌더링 및 페이지 로드 성능 향상 경험, <span className="accent-text font-bold">Web Vitals 지표 개선</span> 경험을 가지고 있습니다.</>,
   },
   {
     title: '수정에 용이하고 확장 가능한 UI 설계',
-    desc: 'SOLID 원칙을 기반으로 재사용 가능하며 확장가능한 UI 설계에 관심이 많으며, 이러한 원칙을 컴포넌트 및 비즈니스 로직에 적용하여 UI 작업공수 감소, 에러 재발생률 감소 등의 성과를 내었습니다.',
+    desc: <><span className="accent-text font-bold">SOLID 원칙</span>을 기반으로 재사용 가능하며 확장가능한 UI 설계에 관심이 많으며, 이를 적용하여 <span className="accent-text font-bold">UI 작업공수 감소, 에러 재발생률 감소</span> 등의 성과를 내었습니다.</>,
   },
   {
     title: '테스트 자동화 구축',
-    desc: 'PlayWright, Vitest, MSW 를 사용하여 단위테스트, e2e 시나리오테스트를 프로젝트에 적용하였습니다. 테스트 대상의 우선순위를 적용하여 test coverage에 집중하기 보다는 핵심 코드를 철저히 테스트 할수 있도록 하였습니다.',
+    desc: <><span className="accent-text font-bold">Playwright, Vitest, MSW</span>를 사용하여 단위테스트, e2e 시나리오테스트를 적용하였습니다. test coverage보다 <span className="accent-text font-bold">핵심 코드를 철저히 테스트</span>하는 것을 우선시하였습니다.</>,
   },
   {
     title: 'AI 자동화를 통한 생산성 향상',
-    desc: 'Claude Code 를 도입하여 UI 작업 등 단순작업을 자동화하였고, 디자인시스템에 Skill 사용하여 정확성과 토큰 사용량을 최적화하였습니다.',
+    desc: <><span className="accent-text font-bold">Claude Code</span>를 도입하여 UI 작업 등 단순작업을 자동화하였고, 디자인시스템에 Skill을 적용하여 <span className="accent-text font-bold">정확성과 토큰 사용량을 최적화</span>하였습니다.</>,
   },
 ];
 
@@ -61,25 +61,20 @@ export default function Page2() {
 
         {/* 우측 2/3: 하이라이트 카드 2xn 그리드 */}
         <div className="col-span-2 grid grid-cols-2 gap-[3%] overflow-y-auto content-start">
-          {highlights.map((item, i) => {
-            const isObj = typeof item === 'object';
-            return (
-              <div
-                key={i}
-                className="rounded-xl px-[6%] py-[4%]"
-                style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
-              >
-                {isObj && (
-                  <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
-                    {item.title}
-                  </p>
-                )}
-                <p className="text-xs text-gray-300 leading-relaxed">
-                  {isObj ? item.desc : item}
-                </p>
-              </div>
-            );
-          })}
+          {highlights.map((item, i) => (
+            <div
+              key={i}
+              className="rounded-xl px-[6%] py-[4%]"
+              style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
+            >
+              <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
+                {item.title}
+              </p>
+              <p className="text-xs text-gray-300 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </SlideLayout>
