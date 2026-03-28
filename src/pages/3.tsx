@@ -1,5 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import { purple } from '@/styles/theme';
+import { purple, orange } from '@/styles/theme';
 
 const softSkills: { title: string; desc: React.ReactNode }[] = [
   {
@@ -30,7 +30,7 @@ export default function Page3() {
             className="rounded-xl px-[6%] py-[4%] flex flex-col justify-center"
             style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
           >
-            <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
+            <p className="text-xs font-semibold mb-[3%]" style={{ color: orange.light }}>
               {skill.title}
             </p>
             <p className="text-xs text-gray-300 leading-relaxed">

@@ -1,5 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import { purple } from '@/styles/theme';
+import { purple, orange } from '@/styles/theme';
 
 const skillCategories = [
   { label: 'Core Library & Framework', items: ['React', 'Next.js (v15 App Router)', 'Vue.js', 'TypeScript', 'React Native'] },
@@ -67,7 +67,7 @@ export default function Page2() {
               className="rounded-xl px-[6%] py-[4%]"
               style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
             >
-              <p className="text-xs font-semibold mb-[3%]" style={{ color: purple.light }}>
+              <p className="text-xs font-semibold mb-[3%]" style={{ color: orange.light }}>
                 {item.title}
               </p>
               <p className="text-xs text-gray-300 leading-relaxed">

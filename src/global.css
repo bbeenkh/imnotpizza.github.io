@@ -151,6 +151,10 @@ body {
   color: #A855F7;
 }
 
+.orange-text {
+  color: #F97316;
+}
+
 /* Count-up animation */
 @keyframes countUp {
   from {

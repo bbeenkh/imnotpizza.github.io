@@ -20,18 +20,18 @@ export default function Page8() {
   return (
     <SlideLayout subtitle="Projects" title="Coconuts">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        {/* Left — 이미지 (1/3) */}
-        <div className="w-1/3 flex items-start">
+        {/* Left — 이미지 (2/5) */}
+        <div className="w-2/5 flex items-start">
           <img
             src="/assets/coconuts-2.png"
             alt="Coconuts 화면 2"
-            className="w-full h-[400px] object-contain rounded-lg"
+            className="w-full h-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
 
-        {/* Right — 설명 (2/3) */}
-        <div className="w-2/3 flex flex-col justify-start">
+        {/* Right — 설명 (3/5) */}
+        <div className="w-3/5 flex flex-col justify-start">
           <div className="flex flex-col gap-[6%]">
             {topics.map((topic, i) => (
               <div key={i}>

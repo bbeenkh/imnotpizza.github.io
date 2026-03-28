@@ -1,5 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import { purple } from '@/styles/theme';
+import { purple, orange } from '@/styles/theme';
 
 type SingleItem = {
   kind?: 'single';
@@ -68,7 +68,7 @@ function CardContent({ item }: { item: Omit<SingleItem, 'kind' | 'extraSpace'> }
   return (
     <>
       <span className="text-sm font-bold text-white">{item.year}</span>
-      <h3 className="text-sm font-semibold text-white mt-[3%]">{item.company}</h3>
+      <h3 className="text-sm font-semibold mt-[3%]" style={{ color: orange.light }}>{item.company}</h3>
       <p className="text-xs font-bold text-white mt-[2%]">{item.project}</p>
       <p className="text-xs text-gray-300 mt-[3%] leading-relaxed">{item.desc}</p>
     </>
@@ -84,7 +84,7 @@ function Card({ item }: { item: CareerItem }) {
         <div className="rounded-lg px-[4%] py-[4%] w-full text-left flex flex-col gap-[3%]" style={cardStyle}>
           <div>
             <span className="text-sm font-bold text-white">{item.sharedHeader.year}</span>
-            <h3 className="text-sm font-semibold text-white mt-[2%]">{item.sharedHeader.company}</h3>
+            <h3 className="text-sm font-semibold mt-[2%]" style={{ color: orange.light }}>{item.sharedHeader.company}</h3>
           </div>
           <div className="flex items-stretch gap-[3%]">
             <div className="flex-1">

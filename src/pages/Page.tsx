@@ -6,6 +6,11 @@ const purple = {
   border: 'rgba(168, 85, 247, 0.3)',
 };
 
+const orange = {
+  light: '#FB923C',
+  muted: 'rgba(249, 115, 22, 0.15)',
+};
+
 function Slide({ children }: { children: React.ReactNode }) {
   return (
     <div className="w-full aspect-video bg-black rounded-lg shadow-2xl overflow-hidden relative">
@@ -159,7 +164,7 @@ function SlideProjects() {
                   <span
                     key={t}
                     className="text-[clamp(0.385rem,0.66vw,0.55rem)] px-[4%] py-[2%] rounded"
-                    style={{ color: purple.light, backgroundColor: purple.muted }}
+                    style={{ color: orange.light, backgroundColor: orange.muted }}
                   >
                     {t}
                   </span>
