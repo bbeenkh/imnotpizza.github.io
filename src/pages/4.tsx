@@ -1,6 +1,6 @@
 import SlideLayout from '@/layouts/SlideLayout';
 import { purple, orange } from '@/styles/theme';
-
+ 
 type SingleItem = {
   kind?: 'single';
   year: string;
@@ -59,7 +59,7 @@ const career: CareerItem[] = [
       year: '',
       company: '',
       project: 'My010 (마이공일공)',
-      desc: <>통신 유통 과정을 손쉽게 관리하도록 도와주는 B2B SaaS 서비스의 설계, 정식 오픈, 고도화 과정에 참여하여 베타테스터 <span className="accent-text font-bold">130명</span>까지 확보하였습니다.</>,
+      desc: <>통신 유통 과정을 손쉽게 관리하도록 도와주는 B2B SaaS 서비스의 MVP, 베타, 정식까지의 서비스 개발에 참여하였으며, <span className="accent-text font-bold">출시 1달만에 사용자 수 250명 돌파</span>하였습니다.</>,
     },
   },
 ];
