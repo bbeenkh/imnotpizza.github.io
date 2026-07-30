@@ -1,41 +1,62 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import { purple } from '@/styles/theme';
 
 const topics = [
   {
-    title: '프로젝트 설명',
-    content: '코코넛은 KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 기능을 담고 있는 서비스입니다.',
-  },
-  {
-    title: '담당 역할',
-    content: '코코넛 신규기능, 유지보수, 이슈대응 작업에 대한 팀원 업무 분배, 일정 조율 등 전반적 팀 운영관리를 하였습니다.',
-  },
-  {
-    title: '주요 기술 스택',
-    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel',
-  },
-  {
     title: '발생한 문제',
-    content: '저희 프론트엔드 팀은 공식 UI 라이브러리를 React를 사용하기로 결정하고, 디자인시스템도 React 기반으로 제작하였습니다. 그러나 코코넛은 Vue.js 기반 프로젝트여서 비교적 코드 생산성이 떨어진다는 불만사항이 나왔고, 때마침 요금계산기 기능의 UI의 리뉴얼 요구사항까지 나와 디자인시스템을 사용하여야 했습니다.',
+    content: (
+      <>
+        my010은 초기에{' '}
+        <span className="accent-text font-bold">멀티레포</span> 구조로 운영되어
+        다음과 같은 문제가 있었습니다.{'\n\n'}
+        <span className="accent-text font-bold">
+          - 배포 시간 최대 4분 소요
+        </span>
+        {'\n'}  변경 여부와 관계없이 전체 패키지를 빌드하여 배포 시간이 길어졌습니다.
+        {'\n'}
+        <span className="accent-text font-bold">
+          - 패키지 간 의존성 관리 복잡
+        </span>
+        {'\n'}  레포가 분리되어 공통 타입, 유틸 등의 동기화 비용이 증가하고
+        일관성이 떨어졌습니다.
+      </>
+    ),
+  },
+  {
+    title: '해결 방법',
+    content: (
+      <>
+        <span className="accent-text font-bold">Turborepo + pnpm</span> 기반
+        모노레포 구조로 전환하였습니다.{'\n\n'}
+        <span className="accent-text font-bold">1. 도메인별 의존성 분리</span>
+        {'\n'}  패키지를 도메인 단위로 분리하여 변경 범위를 명확하게 하였습니다.
+        {'\n'}
+        <span className="accent-text font-bold">2. Vercel 원격 캐시 적용</span>
+        {'\n'}  변경된 패키지만 빌드되도록 캐시를 활용하여 불필요한 빌드를 제거하였습니다.
+      </>
+    ),
+  },
+  {
+    title: '성과',
+    content: (
+      <>
+        배포 시간{' '}
+        <span className="accent-text font-bold">4분 → 최대 55초</span>로 단축,
+        약 77% 감소를 달성하였습니다.{'\n'}패키지 의존성이 명확해져 팀 전체의
+        개발 리드타임도 단축되었습니다.
+      </>
+    ),
   },
 ];
 
 export default function Page7() {
   return (
-    <SlideLayout subtitle="Projects" title="Coconuts">
+    <SlideLayout subtitle="Projects" title="My010">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        {/* Left — 이미지 (2/5) */}
-        <div className="w-2/5 flex items-start">
-          <img
-            src="/assets/coconuts-1.png"
-            alt="Coconuts 견적 화면"
-            className="w-full h-full object-contain rounded-lg"
-            style={{ border: `1px solid ${purple.border}` }}
-          />
-        </div>
+        {/* Left — 이미지 영역 (추후 추가 예정) */}
+        <div className="w-1/3" />
 
-        {/* Right — 설명 (3/5) */}
-        <div className="w-3/5 flex flex-col justify-start">
+        {/* Right — 설명 (2/3) */}
+        <div className="w-2/3 flex flex-col justify-start">
           <div className="flex flex-col gap-[6%]">
             {topics.map((topic, i) => (
               <div key={i}>
