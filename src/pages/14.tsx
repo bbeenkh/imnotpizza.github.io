@@ -1,11 +1,12 @@
 import SlideLayout from '@/layouts/SlideLayout';
 import { purple } from '@/styles/theme';
+import TopicList from '@/components/TopicList';
 
 const topics = [
   {
     title: '프로젝트 설명',
     content:
-      '스위프 앱 5기 프로그램에 참여하여 React Native 기반 모바일 앱 개발을 담당하였습니다. 기획부터 개발, 마켓 심사 대응까지 앱 출시 전 과정을 경험하였습니다.',
+      '스위프 앱 5기 프로그램에 참여하여 오르비츠의 React Native 기반 모바일 앱 개발을 담당하였습니다. 기획부터 개발, 마켓 심사 대응까지 앱 출시 전 과정을 경험하였습니다.',
   },
   {
     title: '담당 역할',
@@ -28,7 +29,7 @@ const topics = [
 
 export default function Page14() {
   return (
-    <SlideLayout subtitle="Projects" title="스위프 앱 5기">
+    <SlideLayout subtitle="Side Projects" title="스위프 앱 5기 참여">
       <div className="flex gap-[4%] h-full pt-[4%]">
         {/* Left — 이미지 */}
         <div className="w-1/2 flex items-center justify-center">
@@ -42,20 +43,7 @@ export default function Page14() {
 
         {/* Right — 설명 (2/3) */}
         <div className="w-1/2 flex flex-col justify-start">
-          <div className="flex flex-col gap-[10%]">
-            {topics.map((topic, i) => (
-              <div key={i}>
-                {topic.title && (
-                  <h4 className="text-lg font-semibold text-white">
-                    {topic.title}
-                  </h4>
-                )}
-                <p className="text-sm text-gray-300 mt-[4%] leading-relaxed whitespace-pre-line">
-                  {topic.content}
-                </p>
-              </div>
-            ))}
-          </div>
+          <TopicList topics={topics} />
         </div>
       </div>
     </SlideLayout>

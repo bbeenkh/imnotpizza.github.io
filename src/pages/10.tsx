@@ -1,5 +1,6 @@
 import SlideLayout from '@/layouts/SlideLayout';
 import { purple } from '@/styles/theme';
+import TopicList from '@/components/TopicList';
 
 const topics = [
   {
@@ -42,20 +43,7 @@ export default function Page10() {
 
         {/* Right — 설명 (2/3) */}
         <div className="w-2/3 flex flex-col justify-start">
-          <div className="flex flex-col gap-[6%]">
-            {topics.map((topic, i) => (
-              <div key={i}>
-                {topic.title && (
-                  <h4 className="text-lg font-semibold text-white">
-                    {topic.title}
-                  </h4>
-                )}
-                <p className="text-sm text-gray-300 mt-[2%] leading-relaxed whitespace-pre-line">
-                  {topic.content}
-                </p>
-              </div>
-            ))}
-          </div>
+          <TopicList topics={topics} />
         </div>
       </div>
     </SlideLayout>
