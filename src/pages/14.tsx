@@ -1,4 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import { purple } from '@/styles/theme';
 
 const topics = [
   {
@@ -29,12 +30,19 @@ export default function Page14() {
   return (
     <SlideLayout subtitle="Projects" title="스위프 앱 5기">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        {/* Left — 이미지 영역 (추후 추가 예정) */}
-        <div className="w-1/3" />
+        {/* Left — 이미지 */}
+        <div className="w-1/2 flex items-center justify-center">
+          <img
+            src="/assets/swyp-1.png"
+            alt="스위프 앱 화면"
+            className="w-full rounded-lg"
+            style={{ border: `1px solid ${purple.border}` }}
+          />
+        </div>
 
         {/* Right — 설명 (2/3) */}
-        <div className="w-2/3 flex flex-col justify-start">
-          <div className="flex flex-col gap-[6%]">
+        <div className="w-1/2 flex flex-col justify-start">
+          <div className="flex flex-col gap-[10%]">
             {topics.map((topic, i) => (
               <div key={i}>
                 {topic.title && (
@@ -42,7 +50,7 @@ export default function Page14() {
                     {topic.title}
                   </h4>
                 )}
-                <p className="text-sm text-gray-300 mt-[2%] leading-relaxed whitespace-pre-line">
+                <p className="text-sm text-gray-300 mt-[4%] leading-relaxed whitespace-pre-line">
                   {topic.content}
                 </p>
               </div>
