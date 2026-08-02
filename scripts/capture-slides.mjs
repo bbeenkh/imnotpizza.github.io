@@ -9,7 +9,7 @@ const ROOT = resolve(__dirname, '..');
 const OUT = resolve(ROOT, 'ppt');
 const APP_URL = 'http://localhost:5678/capture';
 const SERVER_PORT = 5679;
-const TOTAL_PAGES = 12;
+const TOTAL_PAGES = 14;
 
 await mkdir(OUT, { recursive: true });
 

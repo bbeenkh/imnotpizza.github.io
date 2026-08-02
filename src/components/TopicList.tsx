@@ -19,9 +19,9 @@ export default function TopicList({
           {topic.title && (
             <h4 className="text-lg font-semibold text-white">{topic.title}</h4>
           )}
-          <p className="text-sm text-gray-300 mb-3 leading-relaxed whitespace-pre-line">
+          <div className="text-sm text-gray-300 mb-3 leading-relaxed whitespace-pre-line">
             {topic.content}
-          </p>
+          </div>
         </div>
       ))}
     </div>
