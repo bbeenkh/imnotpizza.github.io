@@ -26,6 +26,26 @@ const topics = [
     title: '',
     content: '이 과정에서 휴대폰 목록/상세 정보와 요금제 목록/상세 정보에 대한 api가 여러군데에서 사용되었으나 이 정보들은 변동이 몇 달에 한번정도 발생하는 데이터여서 불필요한 api 호출이란 문제가 있었습니다.',
   },
+  {
+    title: '발생한 문제',
+    content: (
+      <>
+        my010은 초기에{' '}
+        <span className="accent-text font-bold">멀티레포</span> 구조로 운영되어
+        다음과 같은 문제가 있었습니다.{'\n\n'}
+        <span className="accent-text font-bold">
+          - 배포 시간 최대 4분 소요
+        </span>
+        {'\n'}  변경 여부와 관계없이 전체 패키지를 빌드하여 배포 시간이 길어졌습니다.
+        {'\n'}
+        <span className="accent-text font-bold">
+          - 패키지 간 의존성 관리 복잡
+        </span>
+        {'\n'}  레포가 분리되어 공통 타입, 유틸 등의 동기화 비용이 증가하고
+        일관성이 떨어졌습니다.
+      </>
+    ),
+  },
 ];
 
 export default function Page5() {
