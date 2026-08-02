@@ -48,7 +48,7 @@ const career: CareerItem[] = [
   {
     kind: 'paired',
     extraSpace: true,
-    sharedHeader: { year: '2023 ~ 현재', company: '오투플러스' },
+    sharedHeader: { year: '2023 ~ 2026', company: '오투플러스' },
     left: {
       year: '',
       company: '',

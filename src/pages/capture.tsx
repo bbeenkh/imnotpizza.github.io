@@ -12,6 +12,8 @@ import Page9 from './9';
 import Page10 from './10';
 import Page11 from './11';
 import Page12 from './12';
+import Page13 from './13';
+import Page14 from './14';
 
 const PAGES = [
   { num: 1, Component: Page1 },
@@ -26,6 +28,8 @@ const PAGES = [
   { num: 10, Component: Page10 },
   { num: 11, Component: Page11 },
   { num: 12, Component: Page12 },
+  { num: 13, Component: Page13 },
+  { num: 14, Component: Page14 },
 ];
 
 const SAVE_SERVER = 'http://localhost:5679/save';
