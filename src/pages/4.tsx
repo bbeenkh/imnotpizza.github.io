@@ -46,6 +46,12 @@ const career: CareerItem[] = [
     extraSpace: true,
   },
   {
+    year: '2026-05~2026-07',
+    company: '스위프 앱 5기',
+    project: 'Orbits (오르비츠)',
+    desc: <>로테이션 소개팅 앱으로 React Native 기반 앱 개발을 담당하였으며, 기획부터 Android/iOS <span className="accent-text font-bold">양대 마켓 출시</span>까지 전 과정에 참여하였습니다.</>,
+  },
+  {
     kind: 'paired',
     extraSpace: true,
     sharedHeader: { year: '2023 ~ 2026', company: '오투플러스' },
@@ -148,7 +154,7 @@ export default function Page4() {
             <Card item={career[0]} />
           </div>
           <div style={{ gridColumn: '5 / 8' }}>
-            <Card item={career[2]} />
+            <Card item={career[3]} />
           </div>
         </div>
 
@@ -171,13 +177,16 @@ export default function Page4() {
           </div>
         </div>
 
-        {/* Bottom row: 미니스쿨+케이제이엠(col2-4) */}
+        {/* Bottom row: 미니스쿨+케이제이엠(col2-4), 오르비츠(col5-8) */}
         <div
           className="flex-1 grid items-start pt-3"
           style={{ gridTemplateColumns: 'repeat(7, 1fr)', columnGap: '1%' }}
         >
           <div style={{ gridColumn: '2 / 5' }}>
             <Card item={career[1]} />
+          </div>
+          <div style={{ gridColumn: '6 / 8' }}>
+            <Card item={career[2]} />
           </div>
         </div>
       </div>
