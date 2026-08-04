@@ -15,6 +15,7 @@ const skillCategories = [
 export default function Page2() {
   return (
     <SlideLayout subtitle="Frontend Developer" title="기술 스택">
+      <div className="mt-6" />
       <table className="text-sm w-full" style={{ borderCollapse: 'collapse', border: `1px solid ${purple.border}` }}>
         <tbody>
           {skillCategories.map((cat) => (
