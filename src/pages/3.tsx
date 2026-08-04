@@ -61,7 +61,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function SkillCard({ title, desc }: { title: string; desc: React.ReactNode }) {
   return (
     <div
-      className="rounded-xl px-[5%] py-[4%]"
+      className="rounded-xl p-4"
       style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
     >
       <p className="text-xs font-semibold mb-[3%]" style={{ color: orange.light }}>
