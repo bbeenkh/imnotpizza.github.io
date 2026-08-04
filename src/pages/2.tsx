@@ -2,9 +2,9 @@ import SlideLayout from '@/layouts/SlideLayout';
 import { purple, orange } from '@/styles/theme';
 
 const skillCategories = [
-  { label: 'Core Library & Framework', items: ['React', 'Next.js (v15 App Router)', 'Vue.js', 'TypeScript', 'React Native'] },
-  { label: 'State Management', items: ['Zustand', 'React Query', 'Recoil'] },
-  { label: 'Micro Frontend', items: ['Module Federation'] },
+  { label: 'Core Library & Framework', items: ['React', 'Next.js (Page/App Router)', 'Vue.js', 'TypeScript', 'React Native'] },
+  { label: 'State Management', items: ['Zustand', 'React Query', 'Recoil', 'Redux', 'Pinia'] },
+  { label: 'Micro Frontend', items: ['Turborepo', 'Module Federation'] },
   { label: 'Bundler', items: ['Vite', 'Rollup', 'Webpack'] },
   { label: 'Styling', items: ['Tailwind CSS', 'styled-components', 'framer-motion'] },
   { label: 'Deployment & DevOps', items: ['Vercel', 'GitHub Packages', 'Docker'] },
@@ -15,7 +15,7 @@ const skillCategories = [
 const highlights: { title: string; desc: React.ReactNode }[] = [
   {
     title: '프레임워크 & 모바일 프로젝트 설계&운용',
-    desc: <><span className="accent-text font-bold">React, Next.js(v15 App Router), Vue.js, TypeScript</span>를 메인 스택으로 한 서비스 개발경험과 <span className="accent-text font-bold">React Native+SPA Web 기반의 하이브리드 앱</span> 제작 등의 모바일 개발 경험을 가지고 있습니다.</>,
+    desc: <><span className="accent-text font-bold">React, Next.js, Vue.js, TypeScript</span>를 메인 스택으로 한 서비스 개발경험과 <span className="accent-text font-bold">React Native+SPA Web 기반의 하이브리드 앱</span> 제작 등의 모바일 개발 경험을 가지고 있습니다.</>,
   },
   {
     title: '성능 최적화',
@@ -31,7 +31,7 @@ const highlights: { title: string; desc: React.ReactNode }[] = [
   },
   {
     title: 'AI 자동화를 통한 생산성 향상',
-    desc: <><span className="accent-text font-bold">Claude Code</span>를 도입하여 UI 작업 등 단순작업을 자동화하였고, 디자인시스템에 Skill을 적용하여 <span className="accent-text font-bold">정확성과 토큰 사용량을 최적화</span>하였습니다.</>,
+    desc: <><span className="accent-text font-bold">Claude Code, MCP</span>를 도입하여 UI 작업 등 단순작업을 자동화하였고, 디자인시스템에 Skill을 적용하여 <span className="accent-text font-bold">정확성과 토큰 사용량을 최적화</span>하였습니다.</>,
   },
 ];
 
