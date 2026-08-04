@@ -37,7 +37,7 @@ const highlights: { title: string; desc: React.ReactNode }[] = [
 
 export default function Page2() {
   return (
-    <SlideLayout subtitle="핵심역량" title="Hard Skills">
+    <SlideLayout subtitle="핵심 역량" title="Hard Skills">
       <div className="grid grid-cols-3 gap-[4%] h-full pt-[4%]">
         {/* 좌측 1/3: 스킬 카테고리 */}
         <div className="grid grid-cols-2 gap-x-[4%] gap-y-[4%] content-start">

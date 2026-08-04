@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const TOTAL_PAGES = 14;
+const TOTAL_PAGES = 15;
 
 export default function PageNav() {
   const navigate = useNavigate();
