@@ -1,15 +1,16 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import { HighlightText } from '@/lib/utils';
 import { purple } from '@/styles/theme';
 
 const metrics = [
   { label: 'UI 퍼블리싱 소요시간', value: '80%', unit: '단축' },
-  { label: 'API 스펙 업데이트', value: '100%', unit: '자동화' },
-  { label: '테스트·버그 리포트', value: '100%', unit: '자동화' },
+  { label: 'API 스펙 업데이트 소요시간', value: '93%', unit: '단축' },
+  { label: 'API 버그 리포트 작성 및 보고', value: '100%', unit: '자동화' },
 ];
 
 const tools = [
   { name: 'Claude Code', desc: '자동화 파이프라인의 주력 도구. UI 개발·API 연동·타입 선언 자동화' },
-  { name: 'ODS MCP (자체 제작)', desc: '사내 디자인시스템(ODS)에 MCP 서버를 직접 제작·배포. Claude Code가 디자인시스템 컴포넌트를 정확히 사용하도록 하여 UI 작업공수 및 온보딩 시간 단축' },
+  { name: 'ODS MCP', desc: '디자인시스템(ODS)에 MCP 서버를 직접 제작·배포. Claude Code가 컴포넌트를 정확히 사용하도록 하여 기존 프롬프트 정리, 주입 소요시간 및 파편화 이슈 해결' },
   { name: 'Figma MCP', desc: '디자인 컴포넌트를 코드로 직접 변환, 퍼블리싱 자동화로 작업 소요시간 80% 단축' },
   { name: 'Jira MCP', desc: '이슈 기반 API 스펙 업데이트 100% 자동화' },
   { name: 'Playwright MCP', desc: '실제 환경 기준 E2E 테스트 자동화 및 API 버그 리포트 작성 100% 자동화' },
@@ -64,7 +65,15 @@ export default function Page3() {
         </h1>
       </div>
 
-      <div className="flex-1 min-h-0 flex flex-col gap-4 pt-[2%]">
+      <div className="flex-1 min-h-0 flex flex-col gap-6 pt-[2%]">
+
+        {/* 본문 설명 */}
+        <div>
+          <p className="text-lg font-bold text-white"><HighlightText>Claude Code 기반</HighlightText> 업무 프로세스 자동화</p>
+          <p className="text-sm text-gray-300 mt-1">
+            기존 SOLID 원칙 기반 설계에 AI 자동화를 더해, <HighlightText>더 높은 우선순위의 업무에 집중</HighlightText>할 수 있는 개발환경을 조성하였습니다.
+          </p>
+        </div>
         {/* 상단 지표 3칸 */}
         <div className="grid grid-cols-3 gap-4">
           {metrics.map((m) => (
@@ -80,14 +89,6 @@ export default function Page3() {
             </div>
             </div>
           ))}
-        </div>
-
-        {/* 본문 설명 */}
-        <div>
-          <p className="text-lg font-bold text-white">Claude Code 기반 업무 프로세스 자동화</p>
-          <p className="text-sm text-gray-300 mt-1">
-            기존 SOLID 원칙 기반 설계에 AI 활용 자동화를 더해, 변경 요구에 더 신속히 대응 가능한 개발환경 조성
-          </p>
         </div>
 
         {/* 주요 활용 도구 테이블 */}
