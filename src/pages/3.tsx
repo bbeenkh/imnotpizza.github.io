@@ -3,27 +3,23 @@ import { purple, orange } from '@/styles/theme';
 
 const softSkills: { title: string; desc: React.ReactNode }[] = [
   {
-    title: '복잡한 도메인 분석, 팀간 협업을 통한 UI,UX 설계 경험',
-    desc: <>여러 <span className="accent-text font-bold">B2B SaaS 서비스</span>들의 복잡한 비즈니스 도메인을 분석하여 사용자의 니즈와 핵심을 파악하고, 기획·디자인·백엔드와의 협업을 통해 데이터 흐름과 사용자 행동을 기준으로 <span className="accent-text font-bold">UI 설계</span>에 참여하였습니다.</>,
+    title: '프론트엔드 리드 경험 — 팀 운영 및 도메인 재편',
+    desc: <>프론트엔드 리드로서 <span className="accent-text font-bold">팀원 2명의 일정 및 R&R 관리</span>를 담당하였습니다. 도메인 단위로 담당을 재편하여 불필요한 도메인 학습시간을 줄이고 작업 배분을 명료화하여 <span className="accent-text font-bold">팀 전체의 개발 리드타임을 단축</span>하였습니다.</>,
   },
   {
-    title: '문서 작성의 습관화로 일관적인 정보전달 및 혼선 방지',
-    desc: <><span className="accent-text font-bold">Confluence</span>와 같은 사내위키에 회의 주제와 같은 공유내용을 일관적으로 제공하여 팀 내 정보 전달의 일관성을 유지하고 <span className="accent-text font-bold">커뮤니케이션 비용을 최소화</span>하였습니다.</>,
+    title: '비효율적 회의 구조 개선 — 소요시간 66% 감소',
+    desc: <>회의 룰 및 프레임워크를 작성하여 불필요한 논의를 줄이고 <span className="accent-text font-bold">회의 소요시간을 66% 감소</span>시켰습니다. Confluence 기반 사내위키에 공유 내용을 일관되게 기록하여 커뮤니케이션 비용을 최소화하였습니다.</>,
   },
   {
-    title: '팀 개개인의 의견 존중 및 최선의 해결책 모색',
-    desc: <>협업 과정에서 관점이 엇갈릴 때도 각자의 입장을 최대한 수렴하여 공통 목표를 정하였고, 의견 조율이 되지 않을 시 객관적 사실을 바탕으로 <span className="accent-text font-bold">시뮬레이션·프로토타입 제작</span>을 통해 최종적으로 의견을 결정하였습니다.</>,
-  },
-  {
-    title: '서비스의 성장과 개선의 본질을 추구합니다.',
-    desc: <>개발자가 하는 모든 일들은 결국 <span className="accent-text font-bold">회사와 서비스의 성장</span>에 초점을 맞춰야 한다고 믿고 있으며, 저의 업무 방향도 이러한 점을 중심으로 하고 있습니다.</>,
+    title: '스크럼 방법론 도입 — 사후 대응 이슈 80% 감소',
+    desc: <>스크럼 기반 <span className="accent-text font-bold">일일 이슈 공유 체계</span>와 스프린트 범위 조정 프로세스를 도입하여 이슈를 사전에 파악하고 일정 차질을 방지하였습니다. 그 결과 사후 대응 이슈 비율이 <span className="accent-text font-bold">80% 가량 감소</span>하였습니다.</>,
   },
 ];
 
 export default function Page3() {
   return (
     <SlideLayout subtitle="핵심 역량" title="Soft Skills">
-      <div className="grid grid-cols-2 grid-rows-2 gap-[3%] h-full pt-[4%]">
+      <div className="grid grid-cols-1 grid-rows-3 gap-[3%] h-full pt-[4%]">
         {softSkills.map((skill, i) => (
           <div
             key={i}

@@ -9,7 +9,7 @@ const topics = [
   },
   {
     title: '해결과정과 성과',
-    content: (<><span className="accent-text font-bold">- React Hook Form의 FormProvider, useFormContext를 활용하여 Context 기반으로 Form 상태를 관리하고 prop drilling을 제거했습니다.</span>{'\n'}<span className="accent-text font-bold">- useWatch를 활용하여 특정 값 변화만 감지하도록 구성하고, 해당 값 기준으로 API 호출 및 UI 렌더링을 수행하도록 최적화했습니다.</span>{'\n'}<span className="accent-text font-bold">- Form 상태, 서버 상태, 계산 로직을 분리하고 selector 기반으로 재구성하여 전체 구조를 단순화했습니다.</span>{'\n\n'}그 결과 Form 입력 시 JS 실행 시간 약 <span className="accent-text font-bold">60% 감소</span>, 렌더링 부담 감소로 프레임 드랍 약 <span className="accent-text font-bold">35% 개선</span>, 복잡한 계산 로직이 정리되며 유지보수성과 확장성 향상을 이루어냈습니다.</>),
+    content: (<><span className="accent-text font-bold">- React Hook Form의 FormProvider, useFormContext를 활용하여 Context 기반으로 Form 상태를 관리하고 prop drilling을 제거했습니다.</span>{'\n'}<span className="accent-text font-bold">- useWatch를 활용하여 특정 값 변화만 감지하도록 구성하고, 해당 값 기준으로 API 호출 및 UI 렌더링을 수행하도록 최적화했습니다.</span>{'\n'}<span className="accent-text font-bold">- Form 상태, 서버 상태, 계산 로직을 분리하고 selector 기반으로 재구성하여 전체 구조를 단순화했습니다.</span>{'\n\n'}그 결과 프레임 드랍 약 <span className="accent-text font-bold">85% 감소</span>, 코드 양 <span className="accent-text font-bold">18% 감소</span>, 복잡한 계산 로직이 정리되며 유지보수성과 확장성 향상을 이루어냈습니다.</>),
   },
 ];
 

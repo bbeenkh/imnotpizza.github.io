@@ -19,7 +19,6 @@ export default {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:testing-library/react',
     'plugin:prettier/recommended',
     // 'plugin:jsx-a11y/strict',
   ],
@@ -62,18 +61,6 @@ export default {
     'import/no-named-as-default': 'off',
     'import/namespace': 'off',
     'no-inner-declarations': 'off',
-    'testing-library/no-unnecessary-act': 'off',
-    'testing-library/no-render-in-lifecycle': 'off',
   },
-  overrides: [
-    {
-      files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
-
-      plugins: ['testing-library'],
-      extends: [
-        'plugin:testing-library/react',
-      ],
-    },
-  ],
   ignorePatterns: ['node_modules/', 'build/', 'dist/', '.storybook/'],
 }

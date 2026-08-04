@@ -34,7 +34,7 @@ const career: CareerItem[] = [
       year: '2020 ~ 2022',
       company: '미니스쿨',
       project: '땅콩스쿨 & 미니스쿨 에디터',
-      desc: <>미니스쿨과 호두랩스와의 협업하에 실시간 화상수업 서비스인 땅콩스쿨의 이슈 대응, 고도화를 담당하였으며 방송 참여자 수 <span className="accent-text font-bold">30명→400명대</span>까지 확보하며 서비스 성장에 기여하였습니다.</>,
+      desc: <>미니스쿨과 호두랩스와의 협업하에 실시간 화상수업 서비스인 땅콩스쿨의 이슈 대응, 고도화를 담당하였으며 방송 참여자 수 <span className="accent-text font-bold">20명→300명대</span>까지 확보하며 서비스 성장에 기여하였습니다.</>,
     },
     right: {
       year: '2022 ~ 2023',

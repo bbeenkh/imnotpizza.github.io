@@ -13,7 +13,7 @@ const topics = [
   },
   {
     title: '주요 기술 스택',
-    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel',
+    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel, PlayWright',
   },
   {
     title: '발생한 문제',

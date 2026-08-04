@@ -11,12 +11,12 @@ const topics = [
   {
     title: '담당 역할',
     content:
-      '프론트엔드 리드 역할을 맡아 업무 분배, 일정관리 및 기획에 따라 상세 UI 설계에 참여하였습니다. 특히 리베이트(보조금) 등록 및 개통 기능에 중점적으로 담당하였습니다.',
+      '프론트엔드 리드 역할을 맡아 업무 분배, 일정관리와 정책관리 및 개통관리 파트를 담당하였으며, 피드백에 따른 UI/UX 설계 작업에 직접 참여하였습니다.',
   },
   {
     title: '주요 기술 스택',
     content:
-      'Next.js(v15), React19, typescript, Turborepo, React Query, Zustand, Vercel, tailwindcss',
+      'Next.js(v15), Turborepo, pnpm, React Query, Zustand, Vercel, tailwindcss',
   },
   {
     title: '발생한 문제 1',
