@@ -1,32 +1,18 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import { purple, orange } from '@/styles/theme';
+import { purple } from '@/styles/theme';
 
-const tools = [
-  {
-    name: 'Claude Code',
-    desc: 'UI 개발, API 연동, 타입 선언 자동화. Figma MCP와 연동하여 UI 퍼블리싱 소요시간 80% 단축.',
-  },
-  {
-    name: 'Figma MCP',
-    desc: '디자인 컴포넌트를 코드로 직접 변환. Claude Code와 함께 퍼블리싱 파이프라인을 구성하여 반복 작업 제거.',
-  },
-  {
-    name: 'ODS MCP (자체 제작)',
-    desc: 'O2플러스 디자인시스템(ODS)에 MCP 서버를 직접 제작·배포. Claude Code가 디자인시스템 컴포넌트를 정확히 사용하도록 하여 UI 작업공수 및 온보딩 시간 단축.',
-  },
-  {
-    name: 'Playwright MCP',
-    desc: 'E2E 테스트 시나리오를 자연어로 기술하여 자동화. 반복적인 QA 작업을 줄이고 테스트 커버리지 확보.',
-  },
-  {
-    name: '개발 모니터링·디버깅 툴',
-    desc: '상태 및 컴포넌트 구조 시각화 툴을 AI로 추가하여 디버깅 효율 향상.',
-  },
+const metrics = [
+  { label: 'UI 퍼블리싱 소요시간', value: '80%', unit: '단축' },
+  { label: 'API 스펙 업데이트', value: '100%', unit: '자동화' },
+  { label: '테스트·버그 리포트', value: '100%', unit: '자동화' },
 ];
 
-const results = [
-  { label: 'UI 퍼블리싱 소요시간', value: '80%', unit: '단축' },
-  { label: '동일 이슈 재발생률', value: '80%', unit: '감소' },
+const tools = [
+  { name: 'Claude Code', desc: '자동화 파이프라인의 주력 도구. UI 개발·API 연동·타입 선언 자동화' },
+  { name: 'ODS MCP (자체 제작)', desc: '사내 디자인시스템(ODS)에 MCP 서버를 직접 제작·배포. Claude Code가 디자인시스템 컴포넌트를 정확히 사용하도록 하여 UI 작업공수 및 온보딩 시간 단축' },
+  { name: 'Figma MCP', desc: '디자인 컴포넌트를 코드로 직접 변환, 퍼블리싱 자동화로 작업 소요시간 80% 단축' },
+  { name: 'Jira MCP', desc: '이슈 기반 API 스펙 업데이트 100% 자동화' },
+  { name: 'Playwright MCP', desc: '실제 환경 기준 E2E 테스트 자동화 및 API 버그 리포트 작성 100% 자동화' },
 ];
 
 function SparkleIcon() {
@@ -56,23 +42,7 @@ function SparkleIcon() {
 export default function Page3() {
   return (
     <SlideLayout subtitle="AI" title="AI 활용 경험" hideTitle>
-      {/* Gemini gradient background glow */}
       <style>{`
-        .gemini-glow {
-          position: absolute;
-          inset: 0;
-          border-radius: 0.5rem;
-          padding: 1px;
-          background: linear-gradient(135deg, #4285F4, #A855F7, #EA4393, #FA7B17, #4285F4);
-          background-size: 300% 300%;
-          animation: gemini-shift 6s ease infinite;
-          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          opacity: 0.5;
-          pointer-events: none;
-        }
         .gemini-title {
           background: linear-gradient(90deg, #4285F4, #A855F7, #EA4393, #FA7B17);
           background-size: 200% auto;
@@ -83,62 +53,61 @@ export default function Page3() {
         }
       `}</style>
 
-      {/* Custom title with sparkle */}
+      {/* Title with sparkle */}
       <div className="shrink-0 mb-2">
         <p className="accent-text text-[clamp(0.495rem,0.88vw,0.77rem)] uppercase tracking-[0.25em] mb-[0.4em]">
           AI
         </p>
         <h1 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold leading-tight">
+          <span className="gemini-title">AI 활용 경험</span>
           <SparkleIcon />
-          <span className="gemini-title ml-2">AI 활용 경험</span>
         </h1>
       </div>
 
-      <div className="flex gap-[4%] flex-1 min-h-0 pt-[2%] relative">
-        {/* Gemini gradient border */}
-
-        {/* Left — 성과 카드 */}
-        <div className="w-1/3 flex flex-col gap-[4%] justify-start p-[2%]">
-          {results.map((r) => (
+      <div className="flex-1 min-h-0 flex flex-col gap-4 pt-[2%]">
+        {/* 상단 지표 3칸 */}
+        <div className="grid grid-cols-3 gap-4">
+          {metrics.map((m) => (
             <div
-              key={r.label}
-              className="rounded-xl px-[8%] py-[6%] flex flex-col gap-1"
+              key={m.label}
+              className="rounded-xl p-4 flex flex-col gap-1 text-center"
               style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
             >
-              <p className="text-xs text-gray-400">{r.label}</p>
-              <p className="text-3xl font-bold" style={{ color: purple.accent }}>{r.value}</p>
-              <p className="text-sm text-gray-300">{r.unit}</p>
+              <p className="text-xs text-gray-400">{m.label}</p>
+            <div className="flex gap-2 justify-center items-center">
+              <p className="text-2xl font-bold" style={{ color: purple.accent }}>{m.value}</p>
+              <p className="text-sm text-gray-300">{m.unit}</p>
+            </div>
             </div>
           ))}
-          <div
-            className="rounded-xl px-[8%] py-[6%] flex flex-col gap-2"
-            style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
-          >
-            <p className="text-xs text-gray-400">주요 활용 도구</p>
-            {['Claude Code', 'Figma MCP', 'ODS MCP', 'Playwright MCP'].map((tool) => (
-              <span
-                key={tool}
-                className="text-xs px-2 py-0.5 rounded w-fit"
-                style={{ backgroundColor: 'rgba(168,85,247,0.15)', color: orange.light }}
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
         </div>
 
-        {/* Right — 도구별 설명 */}
-        <div className="w-2/3 flex flex-col gap-[3%] justify-start p-[2%]">
-          {tools.map((tool) => (
-            <div
-              key={tool.name}
-              className="rounded-xl px-[5%] py-[3%]"
-              style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: `1px solid ${purple.border}` }}
-            >
-              <p className="text-sm font-semibold mb-1" style={{ color: orange.light }}>{tool.name}</p>
-              <p className="text-xs text-gray-300 leading-relaxed">{tool.desc}</p>
-            </div>
-          ))}
+        {/* 본문 설명 */}
+        <div>
+          <p className="text-lg font-bold text-white">Claude Code 기반 업무 프로세스 자동화</p>
+          <p className="text-sm text-gray-300 mt-1">
+            기존 SOLID 원칙 기반 설계에 AI 활용 자동화를 더해, 변경 요구에 더 신속히 대응 가능한 개발환경 조성
+          </p>
+        </div>
+
+        {/* 주요 활용 도구 테이블 */}
+        <div>
+          <p className="text-sm font-semibold text-white mb-2">주요 활용 도구</p>
+          <table className="text-sm w-full" style={{ borderCollapse: 'collapse', border: `1px solid ${purple.border}` }}>
+            <tbody>
+              {tools.map((tool) => (
+                <tr key={tool.name} style={{ borderBottom: `1px solid ${purple.border}` }}>
+                  <td
+                    className="accent-text whitespace-nowrap align-middle py-2 pr-6"
+                    style={{ background: purple.muted, paddingLeft: '0.5rem', width: '1%' }}
+                  >
+                    {tool.name}
+                  </td>
+                  <td className="text-gray-300 py-2 px-3">{tool.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </SlideLayout>
