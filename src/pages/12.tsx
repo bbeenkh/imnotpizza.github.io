@@ -4,42 +4,31 @@ import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '프로젝트 설명',
-    content: '휘릭은 화물 운송 기사를 위한 WebView 기반 하이브리드 앱으로, 지도를 통해 자신의 위치와 목적지파악, 오더 탐색부터 운송 완료까지의 현황을 실시간으로 확인, 진행할 수 있습니다.',
+    title: '해결방법과 선택 이유',
+    content: (<>이러한 문제를 해결하기 위해 Form 상태, 서버 상태, 계산 로직을 분리하는 구조를 설계했습니다.{'\n\n'}<span className="accent-text font-bold">1. react-hook-form</span>을 도입하여 비제어 컴포넌트 기반 입력 방식을 통해 렌더링 비용을 줄이고자 했습니다.{'\n'}<span className="accent-text font-bold">2.</span> 비일관적이던 데이터 관리 방식을 다음과 같이 개선하였습니다{'\n'}<span className="accent-text font-bold">  - Form 상태: React Hook Form</span>{'\n'}<span className="accent-text font-bold">  - 서버 상태: React Query</span>{'\n'}<span className="accent-text font-bold">  - 계산/가공 로직: Custom Hook (Selector 패턴)</span>{'\n\n'}이처럼 역할을 명확히 분리하여 각 상태의 책임을 분리하고 구조적 복잡도를 낮추고자 했습니다.</>),
   },
   {
-    title: '담당 역할',
-    content: 'Webview, React Native의 설계 및 개발을 담당하였습니다.',
-  },
-  {
-    title: '주요 기술 스택',
-    content: 'React 18, React Native, TypeScript, Create React App, framer-motion',
-  },
-  {
-    title: '발생한 문제',
-    content: (<>휘릭은 백그라운드에서도 지속적으로 위치를 수집·전송해야 하는 구조로, 다음과 같은 문제가 존재했습니다.{'\n\n'}<span className="accent-text font-bold">- 백그라운드 위치전송 예외상황 처리 필요</span>{'\n'}  위치 권한 거부, GPS 비활성화, 네트워크 단절 등 다양한 예외 상황에서 위치 수집 및 전송의 중단 기준이 명확하지 않았고, 사용자에게 상태를 안내하는 기능이 부족했습니다.{'\n'}<span className="accent-text font-bold">- 웹뷰에서 위치 수신 및 지도 반영 구조의 불안정성</span>{'\n'}  Native에서 수집한 위치 데이터를 WebView로 실시간으로 전달할 수 있는 기능이 필요하였습니다.</>),
+    title: '해결과정과 성과',
+    content: (<><span className="accent-text font-bold">- React Hook Form의 FormProvider, useFormContext를 활용하여 Context 기반으로 Form 상태를 관리하고 prop drilling을 제거했습니다.</span>{'\n'}<span className="accent-text font-bold">- useWatch를 활용하여 특정 값 변화만 감지하도록 구성하고, 해당 값 기준으로 API 호출 및 UI 렌더링을 수행하도록 최적화했습니다.</span>{'\n'}<span className="accent-text font-bold">- Form 상태, 서버 상태, 계산 로직을 분리하고 selector 기반으로 재구성하여 전체 구조를 단순화했습니다.</span>{'\n\n'}그 결과 프레임 드랍 약 <span className="accent-text font-bold">85% 감소</span>, 코드 양 <span className="accent-text font-bold">18% 감소</span>, 복잡한 계산 로직이 정리되며 유지보수성과 확장성 향상을 이루어냈습니다.</>),
   },
 ];
 
-export default function Page12() {
+export default function Page11() {
   return (
-    <SlideLayout subtitle="Projects" title="휘릭">
+    <SlideLayout subtitle="Projects" title="오늩의 배송 Toodee (투디)">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        <div className="w-1/3 flex flex-row items-center justify-center gap-[4%]">
+        {/* Left — 이미지 (2/5) */}
+        <div className="w-2/5 flex items-start">
           <img
-            src="/assets/whirik-1-1.png"
-            alt="휘릭 화면 1-1"
-            className="w-1/2 rounded-lg"
-            style={{ border: `1px solid ${purple.border}` }}
-          />
-          <img
-            src="/assets/whirik-1-2.png"
-            alt="휘릭 화면 1-2"
-            className="w-1/2 rounded-lg"
+            src="/assets/toodee-2.png"
+            alt="Toodee 화면 2"
+            className="w-full h-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
-        <div className="w-2/3 flex flex-col justify-start">
+
+        {/* Right — 설명 (3/5) */}
+        <div className="w-3/5 flex flex-col justify-start">
           <TopicList topics={topics} />
         </div>
       </div>

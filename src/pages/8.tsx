@@ -4,39 +4,56 @@ import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '프로젝트 설명',
-    content: '코코넛은 KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 기능을 담고 있는 서비스입니다.',
+    title: '해결 방법',
+    content: (
+      <>
+        <span className="accent-text font-bold">Turborepo + pnpm</span> 기반
+        모노레포 구조로 전환하여 배포 시간 단축, 공용 코드는 패키지로 관리하도록
+        하였습니다.{'\n\n'}
+        <span className="accent-text font-bold">Vercel 원격 캐시를 적용</span>
+        하여 변경된 패키지만 빌드되도록 하여 불필요한 빌드를 제거하였습니다.
+        {'\n\n'}
+        패키지, 프로젝트 수정시 휴먼 에러, 코드 충돌과 같은 혼선을 방지하고자{' '}
+        <span className="accent-text font-bold">
+          레이어를 나누어 관리하는 아키텍처
+        </span>
+        를 구축하였고, <span className="accent-text font-bold">changesets</span>
+        를 통해 버전관리, 변경이력 기록을 자동화하였습니다.
+      </>
+    ),
   },
   {
-    title: '담당 역할',
-    content: '코코넛 신규기능, 유지보수, 이슈대응 작업에 대한 팀원 업무 분배, 일정 조율 등 전반적 팀 운영관리를 하였습니다.',
-  },
-  {
-    title: '주요 기술 스택',
-    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel, PlayWright',
-  },
-  {
-    title: '발생한 문제',
-    content: '저희 프론트엔드 팀은 공식 UI 라이브러리를 React를 사용하기로 결정하고, 디자인시스템도 React 기반으로 제작하였습니다. 그러나 코코넛은 Vue.js 기반 프로젝트여서 비교적 코드 생산성이 떨어진다는 불만사항이 나왔고, 때마침 요금계산기 기능의 UI의 리뉴얼 요구사항까지 나와 디자인시스템을 사용하여야 했습니다.',
+    title: '성과',
+    content: (
+      <>
+        배포 시간{' '}
+        <span className="accent-text font-bold">기존 4분 → 최대 55초</span>
+        까지 약 77% 감소를 달성하였습니다.{'\n'}또한 학습시간, 1인당 회의
+        참여시간 등 도메인 관련 소요시간이 줄어들어{' '}
+        <span className="accent-text font-bold">
+          전체적 개발 리드타임이 단축되었습니다.
+        </span>
+      </>
+    ),
   },
 ];
 
-export default function Page8() {
+export default function Page7() {
   return (
-    <SlideLayout subtitle="Projects" title="Coconuts">
+    <SlideLayout subtitle="Projects" title="My010">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        {/* Left — 이미지 (2/5) */}
-        <div className="w-2/5 flex items-start">
+        {/* Left — 이미지 */}
+        <div className="w-1/3 h-full flex items-center">
           <img
-            src="/assets/coconuts-1.png"
-            alt="Coconuts 견적 화면"
-            className="w-full h-full object-contain rounded-lg"
+            src="/assets/my010-3.png"
+            alt="My010 화면 3"
+            className="w-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
 
-        {/* Right — 설명 (3/5) */}
-        <div className="w-3/5 flex flex-col justify-start">
+        {/* Right — 설명 */}
+        <div className="w-2/3 flex flex-col justify-start">
           <TopicList topics={topics} />
         </div>
       </div>
