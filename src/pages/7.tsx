@@ -43,17 +43,17 @@ export default function Page7() {
     <SlideLayout subtitle="Projects" title="My010">
       <div className="flex gap-[4%] h-full pt-[4%]">
         {/* Left — 이미지 */}
-        <div className="w-1/2 h-full overflow-hidden">
+        <div className="w-1/3 h-full flex items-center">
           <img
             src="/assets/my010-3.png"
             alt="My010 화면 3"
-            className="w-full h-full object-contain rounded-lg"
+            className="w-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
 
         {/* Right — 설명 */}
-        <div className="w-1/2 flex flex-col justify-start">
+        <div className="w-2/3 flex flex-col justify-start">
           <TopicList topics={topics} />
         </div>
       </div>

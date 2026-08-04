@@ -55,7 +55,7 @@ export default function CapturePage() {
 
       try {
         const canvas = await html2canvas(mainEl as HTMLElement, {
-          scale: 3,
+          scale: 6,
           backgroundColor: '#000000',
           useCORS: true,
           logging: false,

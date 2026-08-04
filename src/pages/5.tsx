@@ -16,35 +16,17 @@ const topics = [
   {
     title: '주요 기술 스택',
     content:
-      'Next.js(v15), React19, typescript, React Query, Zustand, Vercel, tailwindcss',
+      'Next.js(v15), React19, typescript, Turborepo, React Query, Zustand, Vercel, tailwindcss',
   },
   {
-    title: '발생한 문제',
-    content: 'My010의 가장 핵심적인 기능 중 하나는 통신 사업자들이 휴대폰 구매시 지급될 리베이트(보조금) 금액을 업로드 및 관리하는 기능입니다.',
+    title: '발생한 문제 1',
+    content:
+      'My010의 핵심 기능인 리베이트 관리에서 휴대폰/요금제 목록 API가 여러 곳에서 반복 호출되었으나, 해당 데이터는 변동 주기가 몇 달에 한 번으로 불필요한 API 호출 문제가 있었습니다.',
   },
   {
-    title: '',
-    content: '이 과정에서 휴대폰 목록/상세 정보와 요금제 목록/상세 정보에 대한 api가 여러군데에서 사용되었으나 이 정보들은 변동이 몇 달에 한번정도 발생하는 데이터여서 불필요한 api 호출이란 문제가 있었습니다.',
-  },
-  {
-    title: '발생한 문제',
-    content: (
-      <>
-        my010은 초기에{' '}
-        <span className="accent-text font-bold">멀티레포</span> 구조로 운영되어
-        다음과 같은 문제가 있었습니다.{'\n\n'}
-        <span className="accent-text font-bold">
-          - 배포 시간 최대 4분 소요
-        </span>
-        {'\n'}  변경 여부와 관계없이 전체 패키지를 빌드하여 배포 시간이 길어졌습니다.
-        {'\n'}
-        <span className="accent-text font-bold">
-          - 패키지 간 의존성 관리 복잡
-        </span>
-        {'\n'}  레포가 분리되어 공통 타입, 유틸 등의 동기화 비용이 증가하고
-        일관성이 떨어졌습니다.
-      </>
-    ),
+    title: '발생한 문제 2',
+    content:
+      'MVP 제작 및 시연 등으로 인해 짧은 배포 주기와 잦은 기획/스펙 변경이 있었으며 이로 인해 배포 시간 과다 소요, 중복 코드 발생, 업무 중복 문제 등으로 생산성이 하락하는 문제가 있었습니다.',
   },
 ];
 

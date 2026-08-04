@@ -47,9 +47,9 @@ const career: CareerItem[] = [
   },
   {
     year: '2026-05~2026-07',
-    company: '스위프 앱 5기',
+    company: '스위프 앱 5기(사이드 프로젝트)',
     project: 'Orbits (오르비츠)',
-    desc: <>로테이션 소개팅 앱으로 React Native 기반 앱 개발을 담당하였으며, 기획부터 Android/iOS <span className="accent-text font-bold">양대 마켓 출시</span>까지 전 과정에 참여하였습니다.</>,
+    desc: <>스위프 앱 5기 참여하여 React Native 기반 앱 개발을 담당하였으며, 기획부터 Android/iOS <span className="accent-text font-bold">양대 마켓 출시</span>까지 전 과정에 참여하였습니다.</>,
   },
   {
     kind: 'paired',

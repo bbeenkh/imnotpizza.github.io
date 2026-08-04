@@ -11,15 +11,28 @@
 - 컴포넌트 분리
   - PageNav (src/components/PageNav.tsx) — 페이지 네비게이션 버튼
   - SlideTitle (src/components/SlideTitle.tsx) — subtitle + title 영역
+  - TopicList (src/components/TopicList.tsx) — 주제+내용 목록, content 래퍼는 div (p 중첩 방지)
 - 테마 색상은 src/styles/theme.ts에서 관리
 - 좌측 상단 페이지 이동 네비게이션 버튼 (SlideLayout 내 fixed)
 - / 및 미등록 경로는 /1로 리다이렉트
 - 폰트 규칙
   - 컨텐츠 주제/제목: text-lg (18px), 하얀색
   - 컨텐츠 내용: text-sm (14px), gray-300
-- 페이지 구성
+- 캡처
+  - scripts/capture-slides.mjs 실행 → 브라우저 /capture 열림 → ppt/ 폴더에 저장
+  - TOTAL_PAGES, capture.tsx의 PAGES 배열 두 곳 모두 페이지 수 맞춰야 함 (현재 14)
+- 페이지 구성 (총 14페이지)
   - 1페이지: 표지 — hideTitle, 큰 제목 상단 배치, 하단에 Contact 링크
   - 2페이지: About — 2x2 grid (균등 row 높이)
   - 3페이지: Career — 좌→우 타임라인, 상하 번갈아 표시
-  - 4페이지: Projects — 좌 1/3 이미지, 우 2/3 설명 (주제+내용 3개)
-  - 5페이지: Contact\
+  - 4페이지: 커리어 타임라인 — 7컬럼 grid, 상단(디엘토/오투플러스), 하단(미니스쿨+케이제이엠/오르비츠)
+  - 5페이지: My010 — 소개+담당역할+기술스택+발생한문제(API호출)+발생한문제(모노레포)
+  - 6페이지: My010 — Data Cache 해결방법 및 성과
+  - 7페이지: My010 — 모노레포 해결방법(Turborepo+pnpm) 및 성과, my010-3.png 이미지 1:1 비율
+  - 8페이지: Coconuts — 소개+담당역할+기술스택+발생한문제
+  - 9페이지: Coconuts — 해결방법 및 성과
+  - 10페이지: Toodee — 소개+담당역할+기술스택+발생한문제
+  - 11페이지: Toodee — 해결방법 및 성과
+  - 12페이지: 휘릭 — 소개+담당역할+기술스택+발생한문제
+  - 13페이지: 휘릭 — 해결방법 및 성과
+  - 14페이지: 스위프 앱 5기 (오르비츠) — 좌(앱이미지+Android/iOS QR), 우(설명)
