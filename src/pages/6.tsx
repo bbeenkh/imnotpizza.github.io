@@ -4,46 +4,86 @@ import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '프로젝트 설명',
-    content:
-      'my010은 대리점, 판매점의 유통 과정을 손쉽게 관리하도록 도와주는 B2B SaaS 서비스입니다.',
+    title: '해결 방법과 선택 이유',
+    content: (
+      <>
+        이러한 문제를 해결하기 위해 Next.js 의 서버 기능 중 하나인{' '}
+        <span className="accent-text font-bold">Data Cache</span> 기능에
+        주목하였습니다.{' '}
+        <span className="accent-text font-bold">Data Cache</span> 를 통해 얻고자
+        하는 효과는 다음과 같았습니다.
+      </>
+    ),
   },
   {
-    title: '담당 역할',
-    content:
-      '프론트엔드 리드 역할을 맡아 업무 분배, 일정관리와 정책관리 및 개통관리 파트를 담당하였으며, 피드백에 따른 UI/UX 설계 작업에 직접 참여하였습니다.',
+    title: '',
+    content: (
+      <p className="accent-text">
+        <span className="font-bold">1.</span> 반복적인 API 호출을 캐시로
+        대체하여 불필요한 트래픽 감소, 브라우저 캐시와는 다르게 유저수에
+        상관없이 한번 캐시된 데이터를 계속 제공하기 때문에 캐시 효과 극대화 가능
+        {'\n'}
+        <span className="font-bold">2.</span> 응답 지연을 줄여 비용 절감 및
+        응답속도 및 UX 향상
+      </p>
+    ),
   },
   {
-    title: '주요 기술 스택',
-    content:
-      'Next.js(v15), Turborepo, pnpm, React Query, Zustand, Vercel, tailwindcss',
+    title: '',
+    content: (
+      <>
+        그리고 스터디를 통해{' '}
+        <span className="accent-text font-bold">Data Cache</span>를 적용할 수
+        있는 조건을 다음과 같이 정리하였고, 휴대폰, 요금제 데이터는 두가지
+        사항을 모두 만족하여 적용하기로 결정하였습니다.
+      </>
+    ),
   },
   {
-    title: '발생한 문제 1',
-    content:
-      'My010의 핵심 기능인 리베이트 관리에서 휴대폰/요금제 목록 API가 여러 곳에서 반복 호출되었으나, 해당 데이터는 변동 주기가 몇 달에 한 번으로 불필요한 API 호출 문제가 있었습니다.',
+    title: '',
+    content: (
+      <p className="accent-text">
+        <span className="font-bold">1.</span> 유저에 관계없이 동일한 데이터를
+        반환하는 API일 것{'\n'}
+        <span className="font-bold">2.</span> 변경 주기가 길어 실시간 갱신이
+        필요하지 않은 데이터일 것
+      </p>
+    ),
   },
   {
-    title: '발생한 문제 2',
-    content:
-      'MVP 제작 및 시연 등으로 인해 짧은 배포 주기와 잦은 기획/스펙 변경이 있었으며 이로 인해 배포 시간 과다 소요, 중복 코드 발생, 업무 중복 문제 등으로 생산성이 하락하는 문제가 있었습니다.',
+    title: '해결 과정과 성과',
+    content: (
+      <>
+        axios 환경에서도 Next.js{' '}
+        <span className="accent-text font-bold">Data Cache</span>를 활용하기
+        위해 최신 버전으로 업데이트 후, 캐시 기간을 무한정으로 지정하였습니다.
+        {'\n'}그리고 수정시 캐시를 초기화하기 위해{' '}
+        <span className="accent-text font-bold">revalidateTag</span>를 호출하는
+        serverless function 을 추가하여 관리자 페이지에서 추가, 수정, 삭제
+        발생시 이를 호출하도록 하였습니다.
+      </>
+    ),
+  },
+  {
+    title: '',
+    content: (
+      <>
+        그 결과, 반복 호출되던 API를 대부분 캐시로 대체하여 호출 수를 약{' '}
+        <span className="accent-text font-bold">99% 이상 감소</span>시켰고,
+        트래픽, 비용 절감 효과 또한 얻게 되었습니다.
+      </>
+    ),
   },
 ];
 
-export default function Page5() {
+export default function Page6() {
   return (
     <SlideLayout subtitle="Projects" title="My010">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        <div className="w-1/3 flex flex-col items-center justify-center gap-[4%]">
+        <div className="w-1/3 flex items-center">
           <img
-            src="/assets/my010-1.png"
-            alt="My010 화면 1"
-            className="w-full rounded-lg"
-            style={{ border: `1px solid ${purple.border}` }}
-          />
-          <img
-            src="/assets/my010-1-2.png"
-            alt="My010 화면 1-2"
+            src="/assets/my010-2.png"
+            alt="My010 화면 2"
             className="w-full rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
