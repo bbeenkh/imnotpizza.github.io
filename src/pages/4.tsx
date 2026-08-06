@@ -91,8 +91,8 @@ export default function Page3() {
         <p className="accent-text text-[clamp(0.495rem,0.88vw,0.77rem)] uppercase tracking-[0.25em] mb-[0.4em]">
           AI
         </p>
-        <h1 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold leading-tight">
-          <span className="gemini-title">AI 활용 경험</span>
+        <h1 className="text-[clamp(0.99rem,2.42vw,1.98rem)] font-bold leading-tight text-white">
+          AI 활용 경험
           <SparkleIcon />
         </h1>
       </div>
