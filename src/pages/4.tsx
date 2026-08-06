@@ -10,7 +10,7 @@ const metrics = [
 
 const tools = [
   { name: 'Claude Code', desc: '자동화 파이프라인의 주력 도구. UI 개발·API 연동·타입 선언 자동화' },
-  { name: 'ODS MCP', desc: '디자인시스템(ODS)에 MCP 서버를 직접 제작·배포. Claude Code가 컴포넌트를 정확히 사용하도록 하여 기존 프롬프트 정리, 주입 소요시간 및 파편화 이슈 해결' },
+  { name: 'ODS MCP', desc: '@modelcontextprotocol/sdk 사용하여 디자인시스템(ODS)적용 자동화하는 MCP server 제작하여 기존 프롬프트 정리, 주입 소요시간 및 파편화 이슈 해결' },
   { name: 'Figma MCP', desc: '디자인 컴포넌트를 코드로 직접 변환, 퍼블리싱 자동화로 작업 소요시간 80% 단축' },
   { name: 'Jira MCP', desc: '이슈 기반 API 스펙 업데이트 100% 자동화' },
   { name: 'Playwright MCP', desc: '실제 환경 기준 E2E 테스트 자동화 및 API 버그 리포트 작성 100% 자동화' },
