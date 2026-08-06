@@ -97,7 +97,7 @@ export default function Page3() {
         </h1>
       </div>
 
-      <div className="flex-1 min-h-0 flex gap-6 pt-[2%]">
+      <div className="flex-1 min-h-0 flex gap-6 flex items-start">
         {/* 좌측 콘텐츠 (3/4) */}
         <div className="flex flex-col gap-6" style={{ flex: 3 }}>
           {/* 본문 설명 */}
@@ -174,8 +174,13 @@ export default function Page3() {
         </div>
 
         {/* 우측 MCP 다이어그램 (1/4) */}
-        <div className="flex flex-col items-center justify-center gap-2" style={{ flex: 1 }}>
-          <p className="text-sm font-semibold text-white">ODS MCP 순서도</p>
+        <div
+          className="flex flex-col items-center justify-center gap-2"
+          style={{ flex: 1 }}
+        >
+          <p className="text-sm font-semibold text-white">
+            <HighlightText>ODS MCP 순서도</HighlightText>
+          </p>
           <img
             src="/assets/ai-mcp-diagram.png"
             alt="ODS MCP 순서도"
