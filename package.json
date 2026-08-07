@@ -14,8 +14,8 @@
     "preview": "vite preview",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
-    "capture": "node scripts/capture-slides.mjs",
-    "capture:headless": "node scripts/capture-slides-headless.mjs"
+    "capture": "node scripts/capture-slides-headless.mjs",
+    "create-pdf": "node scripts/create-pdf.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -89,6 +89,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.11.0",
     "html2canvas": "^1.4.1",
+    "pdf-lib": "^1.17.1",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
     "puppeteer": "^24.40.0",

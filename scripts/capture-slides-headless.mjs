@@ -11,7 +11,7 @@ const TOTAL_PAGES = 15;
 
 // main은 aspect-video + max-w-[1280px]이므로 뷰포트를 이보다 넉넉하게 잡고
 // deviceScaleFactor로 해상도를 올린다 (실제 렌더링 크기는 max-w에서 결정됨).
-const VIEWPORT = { width: 1920, height: 1080, deviceScaleFactor: 2 };
+const VIEWPORT = { width: 1920, height: 1080, deviceScaleFactor: 4 };
 
 await mkdir(OUT, { recursive: true });
 
