@@ -19,8 +19,9 @@
   - 컨텐츠 주제/제목: text-lg (18px), 하얀색
   - 컨텐츠 내용: text-sm (14px), gray-300
 - 캡처
-  - scripts/capture-slides.mjs 실행 → 브라우저 /capture 열림 → ppt/ 폴더에 저장
-  - TOTAL_PAGES, capture.tsx의 PAGES 배열 두 곳 모두 페이지 수 맞춰야 함 (현재 14)
+  - (canvas 방식) `npm run capture` → scripts/capture-slides.mjs 실행 → 브라우저 /capture 열림 (html2canvas로 캡처) → ppt/ 폴더에 저장
+  - (headless 방식) `npm run capture:headless` → scripts/capture-slides-headless.mjs 실행 → 헤드리스 브라우저(Puppeteer)가 /1~/N 라우트를 직접 방문해 main 요소를 스크린샷 → ppt/ 폴더에 저장. 실제 Chromium 렌더링을 사용하므로 html2canvas가 지원하지 못하는 CSS(예: table의 vertical-align)도 정확히 캡처됨. 실행 전 dev 서버(포트 5678)가 떠 있어야 함
+  - TOTAL_PAGES(두 스크립트 모두), capture.tsx의 PAGES 배열, router.tsx의 Route 총 3곳 모두 페이지 수 맞춰야 함 (현재 15)
 - 페이지 구성 (총 14페이지)
   - 1페이지: 표지 — hideTitle, 큰 제목 상단 배치, 하단에 Contact 링크
   - 2페이지: About — 2x2 grid (균등 row 높이)
