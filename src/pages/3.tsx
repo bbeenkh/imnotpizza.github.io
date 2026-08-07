@@ -34,7 +34,7 @@ const hardSkills: { title: string; desc: React.ReactNode }[] = [
 const softSkills: { title: string; desc: React.ReactNode }[] = [
   {
     title: '프론트엔드 리드 경험 — 팀 운영 및 도메인 재편',
-    desc: <>프론트엔드 리드로서 <span className="accent-text font-bold">팀원 2명의 일정 및 R&R 관리</span>를 담당하였습니다. 도메인 단위로 담당을 재편하여 불필요한 도메인 학습시간을 줄이고 작업 배분을 명료화하여 <span className="accent-text font-bold">팀 전체의 개발 리드타임을 단축</span>하였습니다.</>,
+    desc: <>프론트엔드 리드로서 <span className="accent-text font-bold">팀원들의 일정, 테크 리드 및 R&R 관리</span>를 담당하였습니다. 도메인 단위로 담당을 재편하여 불필요한 도메인 학습시간을 줄이고 작업 배분을 명료화하여 <span className="accent-text font-bold">팀 전체의 개발 리드타임을 단축</span>하였습니다.</>,
   },
   {
     title: '비효율적 회의 구조 개선 — 소요시간 66% 감소',

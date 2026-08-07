@@ -108,7 +108,7 @@ export default function Page3() {
             </p>
             <p className="text-sm text-gray-300 mt-1">
               기존 SOLID 원칙 기반 설계에 AI 자동화를 더해,{' '}
-              <HighlightText>더 높은 우선순위의 업무에 집중</HighlightText>할 수
+              팀원들이 <HighlightText>더 가치있는 업무에 집중</HighlightText>할 수
               있는 개발환경을 조성하였습니다.
             </p>
           </div>

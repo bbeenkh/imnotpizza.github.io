@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
-    "capture": "node scripts/capture-slides.mjs"
+    "capture": "node scripts/capture-slides.mjs",
+    "capture:headless": "node scripts/capture-slides-headless.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
