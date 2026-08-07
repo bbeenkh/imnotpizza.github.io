@@ -6,7 +6,7 @@ export default function Page1() {
       <div className="flex flex-col h-full">
         <h1 className="text-[55px] font-bold text-white leading-tight">
           코드 개선과 AI 기반 프로세스 자동화로 <br /> 유저 니즈를 빠르게
-          반영해온 <br /> 프론트엔드 개발자
+          반영해온 <br /> 프론트엔드 개발자&nbsp;
           <span className="accent-text">고보빈</span>입니다.
         </h1>
         <div className="mt-8 flex flex-col gap-4 text-[20px] text-white leading-relaxed max-w-[70%]">
