@@ -20,6 +20,25 @@ export default function Page1() {
             하는 것이 목표입니다.
           </p>
         </div>
+        <div className="mt-auto rounded-xl border border-purple-500/50 bg-white/5 px-6 py-4 flex flex-col gap-2 text-[18px] w-fit">
+          <a
+            href="mailto:bobin6972@gmail.com"
+            className="text-blue-400 underline flex items-center gap-3"
+          >
+            📧 bobin6972@gmail.com
+          </a>
+          <span className="text-white flex items-center gap-3">
+            📞 010-2667-6972
+          </span>
+          <a
+            href="https://github.com/bbeenkh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 underline flex items-center gap-3"
+          >
+            🐙 https://github.com/bbeenkh
+          </a>
+        </div>
       </div>
     </SlideLayout>
   );

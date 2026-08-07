@@ -8,7 +8,7 @@ export default function PageNav() {
   const current = Number(pathname.replace('/', '')) || 1;
 
   return (
-    <div className="fixed top-4 left-4 flex gap-1.5 z-50">
+    <div className="fixed top-4 left-4 flex gap-1.5 z-50 print:hidden">
       {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((page) => (
         <button
           key={page}
