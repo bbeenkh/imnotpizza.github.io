@@ -4,7 +4,7 @@ import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '해결 방법과 선택 이유',
+    title: '문제1-해결 방법',
     content: (
       <>
         이러한 문제를 해결하기 위해 Next.js 의 서버 기능 중 하나인{' '}

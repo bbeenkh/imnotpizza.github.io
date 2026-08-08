@@ -4,7 +4,7 @@ import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '해결 방법',
+    title: '문제2-해결 방법',
     content: (
       <>
         <span className="accent-text font-bold">Turborepo + pnpm</span> 기반

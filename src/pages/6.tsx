@@ -1,4 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
@@ -49,6 +50,7 @@ export default function Page5() {
           />
         </div>
         <div className="w-2/3 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://my010.kr/010-app">my010.kr/010-app</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

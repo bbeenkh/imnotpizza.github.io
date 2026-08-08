@@ -20,3 +20,5 @@ reacthookform실무도입기(12페이지 우측 최상단): https://velog.io/@im
 오르비츠 발표자료(15페이지 우측 기술스택 하단): https://drive.google.com/file/d/1HR7ksampNmweSE9j0iIbc_qM2OIEvBi8/view
 오르비츠플레이스토어(15페이지 우측 기술스택 하단): https://play.google.com/store/apps/details?id=com.swyp.rotationdatingapp
 오르비츠ios(15페이지 우측 기술스택 하단): https://apps.apple.com/kr/app/%EC%98%A4%EB%A5%B4%EB%B9%84%EC%B8%A0-%EB%8C%80%ED%99%94%EB%A5%BC-%EC%97%AC%EB%8A%94-%ED%94%84%EB%A1%9C%ED%95%84-%EC%B9%B4%EB%93%9C/id6784271334
+스위프 수료증
+https://drive.google.com/file/d/1G20md2hAi0dsviLa0VT4SGGFHjDx0ejh/view?usp=sharing

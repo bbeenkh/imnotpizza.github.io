@@ -1,4 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
@@ -33,6 +34,7 @@ export default function Page9() {
 
         {/* Right — 설명 (3/5) */}
         <div className="w-3/5 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://velog.io/@imnotpizza/Webpack-Module-Federation-%EC%A0%81%EC%9A%A9%EA%B8%B0">Module Federation 적용기</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

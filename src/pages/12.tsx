@@ -1,4 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
@@ -29,6 +30,7 @@ export default function Page11() {
 
         {/* Right — 설명 (3/5) */}
         <div className="w-3/5 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://velog.io/@imnotpizza/%EA%B8%B0%EB%A1%9DReact-Hook-Form-%EC%8B%A4%EB%AC%B4-%EB%8F%84%EC%9E%85%EA%B8%B0">React Hook Form 실무 도입기</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

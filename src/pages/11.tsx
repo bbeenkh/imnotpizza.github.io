@@ -1,4 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
@@ -43,6 +44,7 @@ export default function Page10() {
 
         {/* Right — 설명 (2/3) */}
         <div className="w-2/3 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://toodee.kr/">toodee.kr</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

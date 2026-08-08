@@ -1,4 +1,5 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple, orange } from '@/styles/theme';
 
 type SingleItem = {
@@ -34,7 +35,7 @@ const career: CareerItem[] = [
       year: '2020 ~ 2022',
       company: '미니스쿨',
       project: '땅콩스쿨 & 미니스쿨 에디터',
-      desc: <>미니스쿨과 호두랩스와의 협업하에 실시간 화상수업 서비스인 땅콩스쿨의 이슈 대응, 고도화를 담당하였으며 방송 참여자 수 <span className="accent-text font-bold">20명→300명대</span>까지 확보하며 서비스 성장에 기여하였습니다.</>,
+      desc: <>미니스쿨과 호두랩스와의 협업하에 실시간 화상수업 서비스인 땅콩스쿨의 이슈 대응, 고도화를 담당하였으며 방송 참여자 수 <span className="accent-text font-bold">20명→300명대</span>까지 확보하며 서비스 성장에 기여하였습니다. <ExternalLink href="https://www.etnews.com/20210820000175">관련 기사</ExternalLink></>,
     },
     right: {
       year: '2022 ~ 2023',
@@ -59,7 +60,7 @@ const career: CareerItem[] = [
       year: '',
       company: '',
       project: 'Coconuts (코코넛)',
-      desc: <>KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 서비스로 분기 <span className="accent-text font-bold">MAU 7000명대 돌파</span>, <span className="accent-text font-bold">국가산업대상 2년 연속 대상 수상</span> 등에 기여하였습니다.</>,
+      desc: <>KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 서비스로 분기 <span className="accent-text font-bold">MAU 7000명대 돌파</span>, <span className="accent-text font-bold">국가산업대상 2년 연속 대상 수상</span> 등에 기여하였습니다. <ExternalLink href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=562691">관련 기사</ExternalLink></>,
     },
     right: {
       year: '',
