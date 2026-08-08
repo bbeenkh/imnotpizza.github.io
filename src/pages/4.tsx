@@ -35,7 +35,6 @@ const tools = [
       </>
     ),
   },
-  { name: 'Jira MCP', desc: '이슈 기반 API 스펙 업데이트 93% 자동화' },
   {
     name: 'Playwright MCP',
     desc: '실제 환경 기준 E2E 테스트 자동화 및 API 버그 리포트 작성 100% 자동화',
