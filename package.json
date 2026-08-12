@@ -6,16 +6,7 @@
   "homepage": "https://bbeenkh.github.io",
   "scripts": {
     "dev": "vite --mode development",
-    "prod": "vite --mode production",
-    "build": "tsc --noEmitOnError false && vite build",
-    "build:dev": "tsc -b && vite build --mode development",
-    "build:prod": "tsc -b && vite build --mode production",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist",
-    "capture": "node scripts/capture-slides-headless.mjs",
-    "create-pdf": "node scripts/create-pdf.mjs"
+    "deploy": "node scripts/create-pdf.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

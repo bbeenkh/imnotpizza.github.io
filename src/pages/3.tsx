@@ -24,11 +24,11 @@ const hardSkills: { title: string; desc: React.ReactNode }[] = [
         <span className="accent-text font-bold">
           React, Next.js(Page Router, v15 App Router), TypeScript
         </span>
-        를 메인 스택으로 다수의 서비스를 개발 및 유지. 주로 대규모 Form,
-        대시보드, 에디터, 테이블, 차트 등 대규모 데이터 시각화 및 갱신에 대한
-        UI를 주로 작업함. 또한{' '}
-        <span className="accent-text font-bold">React Native + WebView</span>
-        기반 하이브리드 앱 제작 및 모바일 반응형 UI에 대한 작업 경험 있음
+        를 메인 스택으로 다수의 서비스를 개발·유지보수함. 대규모 Form과
+        대시보드, 에디터처럼 데이터의 양과 갱신이 많은 화면을 주로 담당하며
+        테이블·차트 기반 UI를 설계함. 또한{' '}
+        <span className="accent-text font-bold">React Native + WebView</span>{' '}
+        기반 앱 제작, 모바일 지원 UI 제작 담당
       </>
     ),
   },
@@ -49,11 +49,9 @@ const hardSkills: { title: string; desc: React.ReactNode }[] = [
     desc: (
       <>
         <span className="accent-text font-bold">Playwright, Vitest, MSW</span>를
-        사용해 단위 테스트와 e2e 시나리오 테스트를 구축함. coverage 수치보다{' '}
+        사용해 단위 테스트와 e2e 시나리오 테스트를 구축함. coverage 수치에 집중하기 보다는{' '}
         <span className="accent-text font-bold">핵심 코드를 철저히 검증</span>
-        하는 것을 우선 기준으로 삼고,{' '}
-        <span className="accent-text font-bold">Sentry</span> 기반 이슈 추적과
-        함께 운영해 회귀를 관리함.
+        하는 실용적인 방식으로 구축함.
       </>
     ),
   },
@@ -120,7 +118,7 @@ function SkillCard({ title, desc }: { title: string; desc: React.ReactNode }) {
       }}
     >
       <p
-        className="text-xs font-semibold mb-[3%]"
+        className="text-xs font-semibold mb-2"
         style={{ color: orange.light }}
       >
         {title}
@@ -161,7 +159,7 @@ export default function Page2() {
         {/* 좌: Hard Skills 카드 2x2 */}
         <div className="flex flex-col">
           <SectionLabel>Hard Skills</SectionLabel>
-          <div className="grid grid-cols-1 gap-[4%] content-start">
+          <div className="grid grid-cols-1 gap-4 content-start">
             {hardSkills.map((item, i) => (
               <SkillCard key={i} title={item.title} desc={item.desc} />
             ))}
@@ -171,7 +169,7 @@ export default function Page2() {
         {/* 우: Soft Skills 카드 2x2 */}
         <div className="flex flex-col">
           <SectionLabel>Soft Skills</SectionLabel>
-          <div className="grid grid-cols-1 gap-[4%] content-start">
+          <div className="grid grid-cols-1 gap-4 content-start">
             {softSkills.map((item, i) => (
               <SkillCard key={i} title={item.title} desc={item.desc} />
             ))}
