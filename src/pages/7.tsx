@@ -4,7 +4,7 @@ import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '문제1-해결 방법',
+    title: '해결 방법',
     content: (
       <div className="flex flex-col gap-3">
         <p>

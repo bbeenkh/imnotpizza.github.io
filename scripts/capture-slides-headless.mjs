@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const OUT = resolve(ROOT, 'ppt');
 const BASE_URL = process.env.CAPTURE_URL || 'http://localhost:5678';
-const TOTAL_PAGES = 15;
+const TOTAL_PAGES = 14;
 
 // main은 aspect-video + max-w-[1280px]이므로 뷰포트를 이보다 넉넉하게 잡고
 // deviceScaleFactor로 해상도를 올린다 (실제 렌더링 크기는 max-w에서 결정됨).

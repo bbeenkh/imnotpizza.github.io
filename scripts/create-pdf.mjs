@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const OUT = resolve(ROOT, 'ppt', 'portfolio.pdf');
 const BASE_URL = process.env.CAPTURE_URL || 'http://localhost:5678';
-const TOTAL_PAGES = 15;
+const TOTAL_PAGES = 14;
 
 console.log('Launching headless browser...');
 console.log('(Make sure the dev server is running on port 5678)');

@@ -1,80 +1,44 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '문제2-해결 방법',
-    content: (
-      <div className="flex flex-col gap-3">
-        <p>
-          멀티레포 구조에서 발생하는 배포 지연, 코드 중복, 의존성 충돌 문제를
-          해결하기 위해{' '}
-          <span className="accent-text font-bold">Turborepo + pnpm</span> 기반
-          모노레포 구조로의 전환에 주목하였습니다. 모노레포 전환을 통해 얻고자
-          하는 효과는 다음과 같았습니다.
-        </p>
-        <p className="accent-text">
-          <span className="font-bold">1.</span> 공용 코드를 패키지로 분리하여
-          중복 제거 및 일관성 확보{'\n'}
-          <span className="font-bold">2.</span> 변경된 패키지만 빌드하여 불필요한
-          빌드 시간 제거
-        </p>
-        <p>
-          그리고 안정적인 운영을 위해 다음과 같은 추가 조치를 적용하였습니다.
-        </p>
-        <p className="accent-text">
-          <span className="font-bold">1.</span> 패키지 간 의존 방향을 제한하는
-          레이어 아키텍처를 구축하여 휴먼 에러, 코드 충돌 방지{'\n'}
-          <span className="font-bold">2.</span> changesets를 도입하여 버전관리 및
-          변경이력 기록을 자동화
-        </p>
-      </div>
-    ),
+    title: '프로젝트 설명',
+    content: '코코넛은 KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 기능을 담고 있는 서비스입니다.',
   },
   {
-    title: '해결 과정과 성과',
-    content: (
-      <div className="flex flex-col gap-3">
-        <p>
-          <span className="accent-text font-bold">Vercel 원격 캐시를 적용</span>
-          하여 변경된 패키지만 빌드되도록 설정하고, 공용 코드를 내부 패키지로
-          분리하여 각 프로젝트에서 import하는 구조로 전환하였습니다.{'\n'}
-          패키지, 프로젝트 수정시 휴먼 에러, 코드 충돌과 같은 혼선을 방지하고자
-          레이어 아키텍처를 적용하였고,{' '}
-          <span className="accent-text font-bold">changesets</span>로 변경이
-          발생한 패키지의 버전 변경 및 변경사항 작성을 자동화하였습니다.
-        </p>
-        <p>
-          그 결과, 배포 시간{' '}
-          <span className="accent-text font-bold">기존 4분 → 최대 55초</span>
-          까지 약 77% 감소를 달성하였고, 학습시간 및 회의 참여시간 등 도메인 관련
-          소요시간이 줄어들어{' '}
-          <span className="accent-text font-bold">
-            전체적 개발 리드타임이 단축되었습니다.
-          </span>
-        </p>
-      </div>
-    ),
+    title: '담당 역할',
+    content: '코코넛 신규기능, 유지보수, 이슈대응 작업에 대한 팀원 업무 분배, 일정 조율 등 전반적 팀 운영관리를 하였습니다.',
+  },
+  {
+    title: '주요 기술 스택',
+    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel, PlayWright',
+  },
+  {
+    title: '발생한 문제',
+    content: '저희 프론트엔드 팀은 공식 UI 라이브러리를 React를 사용하기로 결정하고, 디자인시스템도 React 기반으로 제작하였습니다. 그러나 코코넛은 Vue.js 기반 프로젝트여서 비교적 코드 생산성이 떨어진다는 불만사항이 나왔고, 때마침 요금계산기 기능의 UI의 리뉴얼 요구사항까지 나와 디자인시스템을 사용하여야 했습니다.',
   },
 ];
 
-export default function Page7() {
+export default function Page8() {
   return (
-    <SlideLayout subtitle="Projects" title="My010">
+    <SlideLayout subtitle="Projects" title="Coconuts">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        {/* Left — 이미지 */}
-        <div className="w-1/3 h-full flex items-center">
+        {/* Left — 이미지 (2/5) */}
+        <div className="w-2/5 flex items-start">
           <img
-            src="/assets/my010-3.png"
-            alt="My010 화면 3"
-            className="w-full object-contain rounded-lg"
+            src="/assets/coconuts-1.png"
+            alt="Coconuts 견적 화면"
+            className="w-full h-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
 
-        {/* Right — 설명 */}
-        <div className="w-2/3 flex flex-col justify-start">
+        {/* Right — 설명 (3/5) */}
+        <div className="w-3/5 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://www.coconuts.co.kr">coconuts.co.kr</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

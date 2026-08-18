@@ -16,7 +16,7 @@ const skillCategories = [
     label: 'State Management',
     items: ['Zustand', 'React Query', 'Recoil', 'Redux', 'Pinia'],
   },
-  { label: 'Micro Frontend', items: ['Turborepo', 'Module Federation'] },
+  { label: 'Micro Frontend', items: ['Module Federation'] },
   { label: 'Bundler', items: ['Vite', 'Rollup', 'Webpack'] },
   {
     label: 'Styling & Visualizing',

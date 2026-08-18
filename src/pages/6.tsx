@@ -17,17 +17,12 @@ const topics = [
   {
     title: '주요 기술 스택',
     content:
-      'Next.js(v15), Turborepo, pnpm, React Query, Zustand, Vercel, tailwindcss',
+      'Next.js(v15), React Query, Zustand, Vercel, tailwindcss',
   },
   {
-    title: '발생한 문제 1',
+    title: '발생한 문제',
     content:
       'My010의 핵심 기능인 리베이트 관리에서 휴대폰/요금제 목록 API가 여러 곳에서 반복 호출되었으나, 해당 데이터는 변동 주기가 몇 달에 한 번으로 불필요한 API 호출 문제가 있었습니다.',
-  },
-  {
-    title: '발생한 문제 2',
-    content:
-      'MVP 제작 및 시연 등으로 인해 짧은 배포 주기와 잦은 기획/스펙 변경이 있었으며 이로 인해 배포 시간 과다 소요, 중복 코드 발생, 업무 중복 문제 등으로 생산성이 하락하는 문제가 있었습니다.',
   },
 ];
 

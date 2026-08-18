@@ -21,19 +21,18 @@
 - 캡처
   - (canvas 방식) `npm run capture` → scripts/capture-slides.mjs 실행 → 브라우저 /capture 열림 (html2canvas로 캡처) → ppt/ 폴더에 저장
   - (headless 방식) `npm run capture:headless` → scripts/capture-slides-headless.mjs 실행 → 헤드리스 브라우저(Puppeteer)가 /1~/N 라우트를 직접 방문해 main 요소를 스크린샷 → ppt/ 폴더에 저장. 실제 Chromium 렌더링을 사용하므로 html2canvas가 지원하지 못하는 CSS(예: table의 vertical-align)도 정확히 캡처됨. 실행 전 dev 서버(포트 5678)가 떠 있어야 함
-  - TOTAL_PAGES(두 스크립트 모두), capture.tsx의 PAGES 배열, router.tsx의 Route 총 3곳 모두 페이지 수 맞춰야 함 (현재 15)
-- 페이지 구성 (총 14페이지)
+  - TOTAL_PAGES(두 스크립트 모두), capture.tsx의 PAGES 배열, router.tsx의 Route 총 3곳 모두 페이지 수 맞춰야 함 (현재 14)
+- 페이지 구성 (총 13페이지)
   - 1페이지: 표지 — hideTitle, 큰 제목 상단 배치, 하단에 Contact 링크
   - 2페이지: About — 2x2 grid (균등 row 높이)
   - 3페이지: Career — 좌→우 타임라인, 상하 번갈아 표시
   - 4페이지: 커리어 타임라인 — 7컬럼 grid, 상단(디엘토/오투플러스), 하단(미니스쿨+케이제이엠/오르비츠)
-  - 5페이지: My010 — 소개+담당역할+기술스택+발생한문제(API호출)+발생한문제(모노레포)
+  - 5페이지: My010 — 소개+담당역할+기술스택+발생한문제(API호출)
   - 6페이지: My010 — Data Cache 해결방법 및 성과
-  - 7페이지: My010 — 모노레포 해결방법(Turborepo+pnpm) 및 성과, my010-3.png 이미지 1:1 비율
-  - 8페이지: Coconuts — 소개+담당역할+기술스택+발생한문제
-  - 9페이지: Coconuts — 해결방법 및 성과
-  - 10페이지: Toodee — 소개+담당역할+기술스택+발생한문제
-  - 11페이지: Toodee — 해결방법 및 성과
-  - 12페이지: 휘릭 — 소개+담당역할+기술스택+발생한문제
-  - 13페이지: 휘릭 — 해결방법 및 성과
-  - 14페이지: 스위프 앱 5기 (오르비츠) — 좌(앱이미지+Android/iOS QR), 우(설명)
+  - 7페이지: Coconuts — 소개+담당역할+기술스택+발생한문제
+  - 8페이지: Coconuts — 해결방법 및 성과
+  - 9페이지: Toodee — 소개+담당역할+기술스택+발생한문제
+  - 10페이지: Toodee — 해결방법 및 성과
+  - 11페이지: 휘릭 — 소개+담당역할+기술스택+발생한문제
+  - 12페이지: 휘릭 — 해결방법 및 성과
+  - 13페이지: 스위프 앱 5기 (오르비츠) — 좌(앱이미지+Android/iOS QR), 우(설명)
