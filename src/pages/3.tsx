@@ -49,7 +49,8 @@ const hardSkills: { title: string; desc: React.ReactNode }[] = [
     desc: (
       <>
         <span className="accent-text font-bold">Playwright, Vitest, MSW</span>를
-        사용해 단위 테스트와 e2e 시나리오 테스트를 구축함. coverage 수치에 집중하기 보다는{' '}
+        사용해 단위 테스트와 e2e 시나리오 테스트를 구축함. coverage 수치에
+        집중하기 보다는{' '}
         <span className="accent-text font-bold">핵심 코드를 철저히 검증</span>
         하는 실용적인 방식으로 구축함.
       </>
@@ -72,15 +73,11 @@ const softSkills: { title: string; desc: React.ReactNode }[] = [
     ),
   },
   {
-    title: '회의 구조 & 스크럼 도입 — 소요시간 66%↓ · 사후 이슈 80%↓',
+    title: '스프린트 기반 팀 프로젝트 운영',
     desc: (
       <>
-        회의 룰 및 프레임워크를 작성해{' '}
-        <span className="accent-text font-bold">회의 소요시간을 66% 감소</span>
-        시키고, 스크럼 기반{' '}
-        <span className="accent-text font-bold">일일 이슈 공유 체계</span>를
-        도입하여 사후 대응 이슈를{' '}
-        <span className="accent-text font-bold">80% 감소</span>시킴.
+        스프린트 기반 프로젝트/일정 관리로 팀을 운영하였고, 이를 통해 기획과
+        우선순위를 설정하고, 일정 진행상황을 체계적으로 확인하였습니다.
       </>
     ),
   },
@@ -117,10 +114,7 @@ function SkillCard({ title, desc }: { title: string; desc: React.ReactNode }) {
         border: `1px solid ${purple.border}`,
       }}
     >
-      <p
-        className="text-xs font-semibold mb-2"
-        style={{ color: orange.light }}
-      >
+      <p className="text-xs font-semibold mb-2" style={{ color: orange.light }}>
         {title}
       </p>
       <p className="text-xs text-gray-300 leading-relaxed">{desc}</p>
