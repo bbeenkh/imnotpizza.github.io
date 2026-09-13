@@ -15,7 +15,7 @@ const topics = [
 
 export default function Page13() {
   return (
-    <SlideLayout subtitle="Projects" title="휘릭">
+    <SlideLayout subtitle="Projects" title="카고링스 기사앱(휘릭)">
       <div className="flex gap-[4%] h-full pt-[4%]">
         <div className="w-1/3 flex items-start">
           <img
