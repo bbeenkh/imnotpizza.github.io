@@ -13,12 +13,12 @@ const topics = [
         <span className="accent-text font-bold">
           오더 완료 전환율과 주간 리텐션
         </span>
-        을 핵심 지표로 정했습니다.{'\n'}
+        을 핵심 지표로 정했습니다.{'\n\n'}
         <span className="accent-text font-bold">
           2. 행동 단위 이벤트 수집:
         </span>{' '}
         앱 진입부터 오더 탐색, 노출, 클릭, 수락, 운송 완료까지 단계별 이벤트를
-        Firebase Analytics로 WebView에 삽입해 이탈 지점을 추적했습니다.{'\n'}
+        Firebase Analytics로 WebView에 삽입해 이탈 지점을 추적했습니다.{'\n\n'}
         <span className="accent-text font-bold">
           3. 원인 파악과 가설 수립:
         </span>{' '}
@@ -37,11 +37,11 @@ const topics = [
         <span className="accent-text font-bold">1. A/B 테스트 구축:</span>{' '}
         Firebase Remote Config 플래그로 사용자를 50:50으로 나누고, 그룹별로 오더
         정렬 방식을 분기 렌더링했습니다. 주요 지표는 오더 수락률, 보조 지표는
-        주간 리텐션으로 지정하였습니다.{'\n'}
+        주간 리텐션으로 지정하였습니다.{'\n\n'}
         <span className="accent-text font-bold">2. 결과 검증:</span> 운임비 우선
         그룹의 오더 수락률이{' '}
         <span className="accent-text font-bold">18.4% → 24.1%</span>로 더 높았고
-        취소율 증가도 없어 운임비 우선을 채택했습니다.{'\n'}
+        취소율 증가도 없어 운임비 우선을 채택했습니다.{'\n\n'}
         <span className="accent-text font-bold">3. 최종 UI 구현:</span> 운임비
         우선을 기본값으로 설정, 거리 우선 탭으로도 변경할 수 있도록 하여 성향에
         따라 다른 추천을 받도록 했으며, 조건을 직접 조정할 수 있는 토글형 필터
@@ -58,21 +58,15 @@ export default function Page9() {
   return (
     <SlideLayout subtitle="Projects" title="휘릭">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        <div className="w-1/3 flex flex-row items-center justify-center gap-[4%]">
+        <div className="w-2/5 flex items-center justify-center">
           <img
-            src="/assets/whirik-3.png"
-            alt="휘릭 오더 추천 화면 1"
-            className="w-1/2 rounded-lg"
-            style={{ border: `1px solid ${purple.border}` }}
-          />
-          <img
-            src="/assets/whirik-4.png"
-            alt="휘릭 오더 추천 화면 2"
-            className="w-1/2 rounded-lg"
+            src="/assets/whirik-5.png"
+            alt="휘릭 오더 추천 화면"
+            className="max-w-full max-h-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
-        <div className="w-2/3 flex flex-col justify-start">
+        <div className="w-3/5 flex flex-col justify-start">
           <TopicList topics={topics} />
         </div>
       </div>
