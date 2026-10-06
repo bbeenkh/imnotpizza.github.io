@@ -5,11 +5,52 @@ import TopicList from '@/components/TopicList';
 const topics = [
   {
     title: '해결 방법과 선택 이유',
-    content: (<>백그라운드 위치추적의 <span className="accent-text font-bold">정책 대응, 안정성, 데이터 흐름 일관성 확보</span>를 목표로 다음과 같은 방향으로 설계했습니다.{'\n\n'}<span className="accent-text font-bold">1. 사용자 제어 기반 위치 추적 구조 도입</span>{'\n'}  - 위치 추적을 기본 비활성화하고, 사용자가 이를 직접 활성화/비활성화 하도록 하였으며 의도치 않게 위치추적 활성화를 방지하였으며, 예기치 못하게 위치전송 실패 시 피드백을 구현하였습니다.{'\n'}<span className="accent-text font-bold">2. Web ↔ Native 간 단일 데이터 흐름 구조 확립</span>{'\n'}  - 위치 데이터 전달 경로를 단일화하여 디버깅 및 유지보수 용이성을 확보했습니다.{'\n'}  - 커스터마이징 및 호환 이슈를 피하기 위해 외부 라이브러리 의존 대신 Android Native에서 직접 구현하기로 하였습니다.</>),
+    content: (
+      <>
+        <span className="accent-text font-bold">1. 목표와 지표 정의:</span>{' '}
+        "오더를 완료한 기사가 1주 후 다시 돌아와 오더를 완료하는 것"을 최종
+        목표로 잡고,{' '}
+        <span className="accent-text font-bold">
+          오더 완료 전환율과 주간 리텐션
+        </span>
+        을 핵심 지표로 정했습니다.{'\n'}
+        <span className="accent-text font-bold">
+          2. 행동 단위 이벤트 수집:
+        </span>{' '}
+        앱 진입부터 오더 탐색, 노출, 클릭, 수락, 운송 완료까지 단계별 이벤트를
+        Firebase Analytics로 WebView에 삽입해 이탈 지점을 추적했습니다.{'\n'}
+        <span className="accent-text font-bold">
+          3. 원인 파악과 가설 수립:
+        </span>{' '}
+        데이터 담당자의 지표 분석 결과, 재방문은 하지만 수락 없이 이탈하는
+        패턴이 확인되어, 유리한 조건의 오더를 상단에 노출하는 추천 기능을 기획
+        담당자와 함께{' '}
+        <span className="accent-text font-bold">거리 우선과 운임비 우선</span>{' '}
+        두 방식을 후보로 세웠습니다.
+      </>
+    ),
   },
   {
     title: '해결 과정과 성과',
-    content: (<><span className="accent-text font-bold">백그라운드 위치 전송 기능은 다음과 같은 단계로 구현했습니다.</span>{'\n\n'}1. 사용자가 기능을 활성화하면 WebView에서 Native로 시작 이벤트를 전달하였고 <span className="accent-text font-bold">ACCESS_FINE_LOCATION</span>, <span className="accent-text font-bold">ACCESS_BACKGROUND_LOCATION</span> 권한 요청 및 승인 절차를 구성했습니다.{'\n'}2. Android Native의 <span className="accent-text font-bold">FusedLocationProviderClient</span>를 활용하여 GPS 좌표와 나침반 방향정보도 수집하였습니다.{'\n'}3. Native에서 수집한 데이터를 React Native에서 setInterval을 사용하여 주기적으로 <span className="accent-text font-bold">postMessage</span>를 통해 WebView로 위치 및 방향 데이터를 전달했습니다.{'\n'}4. 전달받은 데이터를 파싱하여 지도 컴포넌트에 실시간 위치 표시를 나타내도록 하였습니다.</>),
+    content: (
+      <>
+        <span className="accent-text font-bold">1. A/B 테스트 구축:</span>{' '}
+        Firebase Remote Config 플래그로 사용자를 50:50으로 나누고, 그룹별로 오더
+        정렬 방식을 분기 렌더링했습니다. 주요 지표는 오더 수락률, 보조 지표는
+        주간 리텐션으로 지정하였습니다.{'\n'}
+        <span className="accent-text font-bold">2. 결과 검증:</span> 운임비 우선
+        그룹의 오더 수락률이{' '}
+        <span className="accent-text font-bold">18.4% → 24.1%</span>로 더 높았고
+        취소율 증가도 없어 운임비 우선을 채택했습니다.{'\n'}
+        <span className="accent-text font-bold">3. 최종 UI 구현:</span> 운임비
+        우선을 기본값으로 설정, 거리 우선 탭으로도 변경할 수 있도록 하여 성향에
+        따라 다른 추천을 받도록 했으며, 조건을 직접 조정할 수 있는 토글형 필터
+        UI를 추가했습니다.{'\n\n'}
+        그 결과 <span className="accent-text font-bold">리텐션 1% → 8%</span>,{' '}
+        <span className="accent-text font-bold">전환율 12% → 21%</span>로
+        향상되었습니다.
+      </>
+    ),
   },
 ];
 
@@ -17,11 +58,17 @@ export default function Page9() {
   return (
     <SlideLayout subtitle="Projects" title="휘릭">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        <div className="w-1/3 flex items-start">
+        <div className="w-1/3 flex flex-row items-center justify-center gap-[4%]">
           <img
-            src="/assets/whirik-2.png"
-            alt="휘릭 화면 2"
-            className="w-full h-[500px] object-contain rounded-lg"
+            src="/assets/whirik-3.png"
+            alt="휘릭 오더 추천 화면 1"
+            className="w-1/2 rounded-lg"
+            style={{ border: `1px solid ${purple.border}` }}
+          />
+          <img
+            src="/assets/whirik-4.png"
+            alt="휘릭 오더 추천 화면 2"
+            className="w-1/2 rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
