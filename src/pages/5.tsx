@@ -238,7 +238,7 @@ function Card({ item }: { item: CareerItem }) {
 
 const YEARS = [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
 
-export default function Page4() {
+export default function Page5() {
   return (
     <SlideLayout title="커리어 타임라인">
       <div className="flex flex-col h-full pt-[2%]">

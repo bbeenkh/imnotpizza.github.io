@@ -1,44 +1,45 @@
 import SlideLayout from '@/layouts/SlideLayout';
-import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
 const topics = [
   {
     title: '프로젝트 설명',
-    content: '코코넛은 KT M&S와의 협력하에 운영중인 휴대폰 구매 상담과 유통 관리 기능을 담고 있는 서비스입니다.',
+    content: '휘릭은 화물 운송 기사를 위한 WebView 기반 하이브리드 앱으로, 지도를 통해 자신의 위치와 목적지파악, 오더 탐색부터 운송 완료까지의 현황을 실시간으로 확인, 진행할 수 있습니다.',
   },
   {
     title: '담당 역할',
-    content: '코코넛 신규기능, 유지보수, 이슈대응 작업에 대한 팀원 업무 분배, 일정 조율 등 전반적 팀 운영관리를 하였습니다.',
+    content: 'Webview, React Native의 설계 및 개발을 담당하였습니다.',
   },
   {
     title: '주요 기술 스택',
-    content: 'Vue.js(3.0 Composition API), React 18, Webpack, Babel, PlayWright',
+    content: 'React 18, React Native, TypeScript, Create React App, framer-motion',
   },
   {
     title: '발생한 문제',
-    content: '저희 프론트엔드 팀은 공식 UI 라이브러리를 React를 사용하기로 결정하고, 디자인시스템도 React 기반으로 제작하였습니다. 그러나 코코넛은 Vue.js 기반 프로젝트여서 비교적 코드 생산성이 떨어진다는 불만사항이 나왔고, 때마침 요금계산기 기능의 UI의 리뉴얼 요구사항까지 나와 디자인시스템을 사용하여야 했습니다.',
+    content: (<>휘릭은 백그라운드에서도 지속적으로 위치를 수집·전송해야 하는 구조로, 다음과 같은 문제가 존재했습니다.{'\n\n'}<span className="accent-text font-bold">- 백그라운드 위치전송 예외상황 처리 필요</span>{'\n'}  위치 권한 거부, GPS 비활성화, 네트워크 단절 등 다양한 예외 상황에서 위치 수집 및 전송의 중단 기준이 명확하지 않았고, 사용자에게 상태를 안내하는 기능이 부족했습니다.{'\n'}<span className="accent-text font-bold">- 웹뷰에서 위치 수신 및 지도 반영 구조의 불안정성</span>{'\n'}  Native에서 수집한 위치 데이터를 WebView로 실시간으로 전달할 수 있는 기능이 필요하였습니다.</>),
   },
 ];
 
 export default function Page8() {
   return (
-    <SlideLayout subtitle="Projects" title="Coconuts">
+    <SlideLayout subtitle="Projects" title="휘릭">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        {/* Left — 이미지 (2/5) */}
-        <div className="w-2/5 flex items-start">
+        <div className="w-1/3 flex flex-row items-center justify-center gap-[4%]">
           <img
-            src="/assets/coconuts-1.png"
-            alt="Coconuts 견적 화면"
-            className="w-full h-full object-contain rounded-lg"
+            src="/assets/whirik-1-1.png"
+            alt="휘릭 화면 1-1"
+            className="w-1/2 rounded-lg"
+            style={{ border: `1px solid ${purple.border}` }}
+          />
+          <img
+            src="/assets/whirik-1-2.png"
+            alt="휘릭 화면 1-2"
+            className="w-1/2 rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
-
-        {/* Right — 설명 (3/5) */}
-        <div className="w-3/5 flex flex-col justify-start">
-          <div className="mb-2 text-sm"><ExternalLink href="https://www.coconuts.co.kr">coconuts.co.kr</ExternalLink></div>
+        <div className="w-2/3 flex flex-col justify-start">
           <TopicList topics={topics} />
         </div>
       </div>

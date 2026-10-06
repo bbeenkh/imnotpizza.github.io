@@ -122,7 +122,7 @@ function SkillCard({ title, desc }: { title: string; desc: React.ReactNode }) {
   );
 }
 
-export default function Page2() {
+export default function Page3() {
   return (
     <SlideLayout subtitle="skills" title="Skills">
       <div className="grid grid-cols-2 gap-[3%] h-full pt-[3%]">

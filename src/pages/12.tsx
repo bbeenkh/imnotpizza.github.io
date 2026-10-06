@@ -1,45 +1,50 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
 const topics = [
   {
     title: '프로젝트 설명',
-    content: '휘릭은 화물 운송 기사를 위한 WebView 기반 하이브리드 앱으로, 지도를 통해 자신의 위치와 목적지파악, 오더 탐색부터 운송 완료까지의 현황을 실시간으로 확인, 진행할 수 있습니다.',
+    content: '퀵, 택배접수, 배송현황, 결제현황 등을 처리하고 실시간 배송 현황을 손쉽게 파악할 수 있는 PC/앱 기반 B2B 서비스입니다. 앱의 경우 webview를 통해 컨텐츠를 보여주는 하이브리드 앱 방식입니다.',
   },
   {
     title: '담당 역할',
-    content: 'Webview, React Native의 설계 및 개발을 담당하였습니다.',
+    content: '투디 웹 서비스 프론트엔드의 전반적인 개발을 담당하였습니다.',
   },
   {
     title: '주요 기술 스택',
-    content: 'React 18, React Native, TypeScript, Create React App, framer-motion',
+    content: 'Next.js(Page Router), React18, typescript, React Hook Form, Recoil',
   },
   {
     title: '발생한 문제',
-    content: (<>휘릭은 백그라운드에서도 지속적으로 위치를 수집·전송해야 하는 구조로, 다음과 같은 문제가 존재했습니다.{'\n\n'}<span className="accent-text font-bold">- 백그라운드 위치전송 예외상황 처리 필요</span>{'\n'}  위치 권한 거부, GPS 비활성화, 네트워크 단절 등 다양한 예외 상황에서 위치 수집 및 전송의 중단 기준이 명확하지 않았고, 사용자에게 상태를 안내하는 기능이 부족했습니다.{'\n'}<span className="accent-text font-bold">- 웹뷰에서 위치 수신 및 지도 반영 구조의 불안정성</span>{'\n'}  Native에서 수집한 위치 데이터를 WebView로 실시간으로 전달할 수 있는 기능이 필요하였습니다.</>),
+    content: (<>Toodee의 핵심 기능인 배송 접수 페이지는 다양한 입력값과 조건에 따라 API 호출과 UI가 동적으로 변경되는 구조였습니다.{'\n\n'}이 과정에서 다음과 같은 문제가 있었습니다.{'\n'}<span className="accent-text font-bold">- Form 입력 시 전체 컴포넌트가 리렌더링되며 프레임 저하 발생으로 실제 사용시 딜레이 발생</span>{'\n'}<span className="accent-text font-bold">- 상태 변경에 따라 API 재호출과 계산 로직이 반복되며 불필요한 연산 증가</span>{'\n'}<span className="accent-text font-bold">- 복잡한 계산 및 가공 로직이 분산되어 코드 가독성과 유지보수성 저하</span></>),
   },
 ];
 
 export default function Page12() {
   return (
-    <SlideLayout subtitle="Projects" title="휘릭">
+    <SlideLayout subtitle="Projects" title="오늘의 배송 Toodee (투디)">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        <div className="w-1/3 flex flex-row items-center justify-center gap-[4%]">
+        {/* Left — 이미지 (1/3) */}
+        <div className="w-1/3 flex flex-col items-center justify-center gap-[4%]">
           <img
-            src="/assets/whirik-1-1.png"
-            alt="휘릭 화면 1-1"
-            className="w-1/2 rounded-lg"
+            src="/assets/toodee-main.webp"
+            alt="Toodee 메인 화면"
+            className="w-4/5 rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
           <img
-            src="/assets/whirik-1-2.png"
-            alt="휘릭 화면 1-2"
-            className="w-1/2 rounded-lg"
+            src="/assets/toodee-order-rz.webp"
+            alt="Toodee 접수 화면"
+            className="w-4/5 rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
+
+        {/* Right — 설명 (2/3) */}
         <div className="w-2/3 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://toodee.kr/">toodee.kr</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

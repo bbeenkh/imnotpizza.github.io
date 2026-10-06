@@ -1,31 +1,36 @@
 import SlideLayout from '@/layouts/SlideLayout';
+import ExternalLink from '@/components/ExternalLink';
 import { purple } from '@/styles/theme';
 import TopicList from '@/components/TopicList';
 
 const topics = [
   {
-    title: '해결 방법과 선택 이유',
-    content: (<>백그라운드 위치추적의 <span className="accent-text font-bold">정책 대응, 안정성, 데이터 흐름 일관성 확보</span>를 목표로 다음과 같은 방향으로 설계했습니다.{'\n\n'}<span className="accent-text font-bold">1. 사용자 제어 기반 위치 추적 구조 도입</span>{'\n'}  - 위치 추적을 기본 비활성화하고, 사용자가 이를 직접 활성화/비활성화 하도록 하였으며 의도치 않게 위치추적 활성화를 방지하였으며, 예기치 못하게 위치전송 실패 시 피드백을 구현하였습니다.{'\n'}<span className="accent-text font-bold">2. Web ↔ Native 간 단일 데이터 흐름 구조 확립</span>{'\n'}  - 위치 데이터 전달 경로를 단일화하여 디버깅 및 유지보수 용이성을 확보했습니다.{'\n'}  - 커스터마이징 및 호환 이슈를 피하기 위해 외부 라이브러리 의존 대신 Android Native에서 직접 구현하기로 하였습니다.</>),
+    title: '해결방법과 선택 이유',
+    content: (<>이러한 문제를 해결하기 위해 Form 상태, 서버 상태, 계산 로직을 분리하는 구조를 설계했습니다.{'\n\n'}<span className="accent-text font-bold">1. react-hook-form</span>을 도입하여 비제어 컴포넌트 기반 입력 방식을 통해 렌더링 비용을 줄이고자 했습니다.{'\n'}<span className="accent-text font-bold">2.</span> 비일관적이던 데이터 관리 방식을 다음과 같이 개선하였습니다{'\n'}<span className="accent-text font-bold">  - Form 상태: React Hook Form</span>{'\n'}<span className="accent-text font-bold">  - 서버 상태: React Query</span>{'\n'}<span className="accent-text font-bold">  - 계산/가공 로직: Custom Hook (Selector 패턴)</span>{'\n\n'}이처럼 역할을 명확히 분리하여 각 상태의 책임을 분리하고 구조적 복잡도를 낮추고자 했습니다.</>),
   },
   {
-    title: '해결 과정과 성과',
-    content: (<><span className="accent-text font-bold">백그라운드 위치 전송 기능은 다음과 같은 단계로 구현했습니다.</span>{'\n\n'}1. 사용자가 기능을 활성화하면 WebView에서 Native로 시작 이벤트를 전달하였고 <span className="accent-text font-bold">ACCESS_FINE_LOCATION</span>, <span className="accent-text font-bold">ACCESS_BACKGROUND_LOCATION</span> 권한 요청 및 승인 절차를 구성했습니다.{'\n'}2. Android Native의 <span className="accent-text font-bold">FusedLocationProviderClient</span>를 활용하여 GPS 좌표와 나침반 방향정보도 수집하였습니다.{'\n'}3. Native에서 수집한 데이터를 React Native에서 setInterval을 사용하여 주기적으로 <span className="accent-text font-bold">postMessage</span>를 통해 WebView로 위치 및 방향 데이터를 전달했습니다.{'\n'}4. 전달받은 데이터를 파싱하여 지도 컴포넌트에 실시간 위치 표시를 나타내도록 하였습니다.</>),
+    title: '해결과정과 성과',
+    content: (<><span className="accent-text font-bold">- React Hook Form의 FormProvider, useFormContext를 활용하여 Context 기반으로 Form 상태를 관리하고 prop drilling을 제거했습니다.</span>{'\n'}<span className="accent-text font-bold">- useWatch를 활용하여 특정 값 변화만 감지하도록 구성하고, 해당 값 기준으로 API 호출 및 UI 렌더링을 수행하도록 최적화했습니다.</span>{'\n'}<span className="accent-text font-bold">- Form 상태, 서버 상태, 계산 로직을 분리하고 selector 기반으로 재구성하여 전체 구조를 단순화했습니다.</span>{'\n\n'}그 결과 프레임 드랍 약 <span className="accent-text font-bold">85% 감소</span>, 코드 양 <span className="accent-text font-bold">18% 감소</span>, 복잡한 계산 로직이 정리되며 유지보수성과 확장성 향상을 이루어냈습니다.</>),
   },
 ];
 
 export default function Page13() {
   return (
-    <SlideLayout subtitle="Projects" title="휘릭">
+    <SlideLayout subtitle="Projects" title="오늘의 배송 Toodee (투디)">
       <div className="flex gap-[4%] h-full pt-[4%]">
-        <div className="w-1/3 flex items-start">
+        {/* Left — 이미지 (2/5) */}
+        <div className="w-2/5 flex items-start">
           <img
-            src="/assets/whirik-2.png"
-            alt="휘릭 화면 2"
-            className="w-full h-[500px] object-contain rounded-lg"
+            src="/assets/toodee-2.png"
+            alt="Toodee 화면 2"
+            className="w-full h-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
         </div>
-        <div className="w-2/3 flex flex-col justify-start">
+
+        {/* Right — 설명 (3/5) */}
+        <div className="w-3/5 flex flex-col justify-start">
+          <div className="mb-2 text-sm"><ExternalLink href="https://velog.io/@imnotpizza/%EA%B8%B0%EB%A1%9DReact-Hook-Form-%EC%8B%A4%EB%AC%B4-%EB%8F%84%EC%9E%85%EA%B8%B0">React Hook Form 실무 도입기</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

@@ -6,23 +6,27 @@ import TopicList from '@/components/TopicList';
 const topics = [
   {
     title: '해결방법과 선택 이유',
-    content: (<>이러한 문제를 해결하기 위해 Form 상태, 서버 상태, 계산 로직을 분리하는 구조를 설계했습니다.{'\n\n'}<span className="accent-text font-bold">1. react-hook-form</span>을 도입하여 비제어 컴포넌트 기반 입력 방식을 통해 렌더링 비용을 줄이고자 했습니다.{'\n'}<span className="accent-text font-bold">2.</span> 비일관적이던 데이터 관리 방식을 다음과 같이 개선하였습니다{'\n'}<span className="accent-text font-bold">  - Form 상태: React Hook Form</span>{'\n'}<span className="accent-text font-bold">  - 서버 상태: React Query</span>{'\n'}<span className="accent-text font-bold">  - 계산/가공 로직: Custom Hook (Selector 패턴)</span>{'\n\n'}이처럼 역할을 명확히 분리하여 각 상태의 책임을 분리하고 구조적 복잡도를 낮추고자 했습니다.</>),
+    content: (<>Vue.js프로젝트 내부에서 안정적으로 React 코드를 사용할 방법을 찾는 도중 <span className="accent-text font-bold">Webpack Module Federation</span> Github 예제에서 실제로 구현되어있는것을 보고 사용하기로 결정, 다음과 같은 이점으로 인해 도입하기로 결정하였습니다.{'\n'}<span className="accent-text font-bold">1. 모듈은 별도 프로젝트로 제작되기 때문에 host, module 코드의 독립성 보장</span>{'\n'}<span className="accent-text font-bold">2. 이미 예제가 존재하여 문제없이 사용가능</span>{'\n'}<span className="accent-text font-bold">3. webpack 정식기능</span></>),
+  },
+  {
+    title: '',
+    content: (<>적용 과정에서 다음과 같은 문제점이 발생하였고, 다음과 같이 해결하였습니다.{'\n'}<span className="accent-text font-bold">1. Type 공유: mfed는 자바스크립트 모듈 공유만 담당하여 type 공유는 되지 않음: @module-federation/typescript 사용</span>{'\n'}<span className="accent-text font-bold">2. 어떤 기능을 어디까지 대체할 것인지: 수정빈도 높으며 모달과 같이 비교적 쉽게 분리할 수 있는것부터 대체</span>{'\n'}<span className="accent-text font-bold">3. 스타일 충돌문제: tailwind prefix 부여로 스타일 충돌 방지</span></>),
   },
   {
     title: '해결과정과 성과',
-    content: (<><span className="accent-text font-bold">- React Hook Form의 FormProvider, useFormContext를 활용하여 Context 기반으로 Form 상태를 관리하고 prop drilling을 제거했습니다.</span>{'\n'}<span className="accent-text font-bold">- useWatch를 활용하여 특정 값 변화만 감지하도록 구성하고, 해당 값 기준으로 API 호출 및 UI 렌더링을 수행하도록 최적화했습니다.</span>{'\n'}<span className="accent-text font-bold">- Form 상태, 서버 상태, 계산 로직을 분리하고 selector 기반으로 재구성하여 전체 구조를 단순화했습니다.</span>{'\n\n'}그 결과 프레임 드랍 약 <span className="accent-text font-bold">85% 감소</span>, 코드 양 <span className="accent-text font-bold">18% 감소</span>, 복잡한 계산 로직이 정리되며 유지보수성과 확장성 향상을 이루어냈습니다.</>),
+    content: (<>React 모듈을 독립적으로 구성한 뒤 기존 Vue 애플리케이션에 점진적으로 통합하는 방식으로 리팩토링을 수행하였습니다.{'\n\n'}그 결과, Host 프로젝트에 <span className="accent-text font-bold">Side Effect를 일으키지 않고도</span> React 모듈을 적용하여 팀원의 만족도와 생산성 향상에 기여하게 되었습니다.</>),
   },
 ];
 
 export default function Page11() {
   return (
-    <SlideLayout subtitle="Projects" title="오늩의 배송 Toodee (투디)">
+    <SlideLayout subtitle="Projects" title="Coconuts">
       <div className="flex gap-[4%] h-full pt-[4%]">
         {/* Left — 이미지 (2/5) */}
         <div className="w-2/5 flex items-start">
           <img
-            src="/assets/toodee-2.png"
-            alt="Toodee 화면 2"
+            src="/assets/coconuts-2.png"
+            alt="Coconuts 화면 2"
             className="w-full h-full object-contain rounded-lg"
             style={{ border: `1px solid ${purple.border}` }}
           />
@@ -30,7 +34,7 @@ export default function Page11() {
 
         {/* Right — 설명 (3/5) */}
         <div className="w-3/5 flex flex-col justify-start">
-          <div className="mb-2 text-sm"><ExternalLink href="https://velog.io/@imnotpizza/%EA%B8%B0%EB%A1%9DReact-Hook-Form-%EC%8B%A4%EB%AC%B4-%EB%8F%84%EC%9E%85%EA%B8%B0">React Hook Form 실무 도입기</ExternalLink></div>
+          <div className="mb-2 text-sm"><ExternalLink href="https://velog.io/@imnotpizza/Webpack-Module-Federation-%EC%A0%81%EC%9A%A9%EA%B8%B0">Module Federation 적용기</ExternalLink></div>
           <TopicList topics={topics} />
         </div>
       </div>

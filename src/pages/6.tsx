@@ -26,7 +26,7 @@ const topics = [
   },
 ];
 
-export default function Page5() {
+export default function Page6() {
   return (
     <SlideLayout subtitle="Projects" title="My010">
       <div className="flex gap-[4%] h-full pt-[4%]">
