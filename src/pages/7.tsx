@@ -52,8 +52,7 @@ const topics = [
         </p>
         <p>
           그 결과, 반복 호출되던 API를 대부분 캐시로 대체하여 호출 수를 약{' '}
-          <span className="accent-text font-bold">99% 이상 감소</span>시켰고,
-          트래픽, 비용 절감 효과 또한 얻게 되었습니다.
+          <span className="accent-text font-bold">99% 감소</span>시켰습니다.
         </p>
       </div>
     ),
