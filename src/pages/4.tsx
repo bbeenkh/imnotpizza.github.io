@@ -11,18 +11,24 @@ const metrics = [
 const tools = [
   {
     name: 'Claude Code',
-    desc: '자동화 파이프라인의 주력 도구. UI 개발·API 연동·타입 선언 자동화',
+    desc: (
+      <>
+        자동화 파이프라인의 주력 도구. 기능·상황별{' '}
+        <HighlightText>Skill·Rules와 PRD 기반 하네스</HighlightText>를 구축해
+        PRD 분석부터 PR 생성까지 설계 의도대로 동작하도록 자동화. UI 개발·API
+        연동·타입 선언 자동화
+      </>
+    ),
   },
   {
     name: 'ODS MCP',
     desc: (
       <>
         <HighlightText>@modelcontextprotocol/sdk</HighlightText> 사용하여 디자인
-        시스템 적용 자동화하는 MCP server 제작,{' '}
+        시스템의 스펙 및 사용예시 읽어오는 MCP server 제작,{' '}
         <HighlightText>
-          기존 프롬프트 정리와 주입 소요시간 및 파편화 이슈
-        </HighlightText>{' '}
-        해결
+          어느 프로젝트에서든 일관적으로 컴포넌트 사용할 수 있도록 함
+        </HighlightText>
       </>
     ),
   },
@@ -30,14 +36,18 @@ const tools = [
     name: 'Figma MCP',
     desc: (
       <>
-        디자인 컴포넌트를 코드로 직접 변환, 퍼블리싱 자동화로{' '}
-        <HighlightText>UI 작업 소요시간 단축</HighlightText>
+        디자인 컴포넌트를 코드로 직접 변환,{' '}
+        <HighlightText>퍼블리싱, 배치 자동화로 UI 작업 소요시간 단축</HighlightText>
       </>
     ),
   },
   {
     name: 'Playwright MCP',
     desc: '실제 환경 기준 E2E 테스트 자동화 및 API 버그 리포트 작성 100% 자동화',
+  },
+  {
+    name: '디버깅 툴',
+    desc: '개발용 모니터링·디버깅 툴을 AI로 제작해 상태 및 구조를 시각화, 디버깅 효율 향상',
   },
 ];
 
@@ -71,7 +81,7 @@ function SparkleIcon() {
   );
 }
 
-export default function Page3() {
+export default function Page4() {
   return (
     <SlideLayout subtitle="AI" title="AI 활용 경험" hideTitle>
       <style>{`
@@ -106,9 +116,10 @@ export default function Page3() {
               자동화
             </p>
             <p className="text-sm text-gray-300 mt-1">
-              기존 SOLID 원칙 기반 설계에 AI 자동화를 더해,{' '}
-              팀원들이 <HighlightText>더 가치있는 업무에 집중</HighlightText>할 수
-              있는 개발환경을 조성하였습니다.
+              기존 SOLID 원칙 기반 설계에 AI 자동화를 더해 프론트 팀
+              업무플로우에 적용, 팀원들이{' '}
+              <HighlightText>더 가치있는 업무에 집중</HighlightText>할 수 있는
+              개발환경을 조성하였습니다.
             </p>
           </div>
           {/* 상단 지표 3칸 */}
